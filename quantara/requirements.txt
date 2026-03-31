@@ -1,0 +1,14 @@
+# Dependencias de Quantara
+# Responsabilidad: Gestión de dependencias del proyecto
+
+fastapi
+uvicorn
+pydantic
+transformers
+torch
+pillow
+mlflow
+python-multipart
+sqlalchemy
+psycopg2-binary
+pydantic-settings
