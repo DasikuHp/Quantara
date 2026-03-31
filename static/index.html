@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantara — Control de Costes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg: #0a0b0e;
+  --surface: #111318;
+  --surface2: #181b23;
+  --border: #1f2330;
+  --accent: #c8f135;
+  --accent2: #4fffb0;
+  --danger: #ff4f6e;
+  --warn: #ffa94d;
+  --text: #e8eaf2;
+  --muted: #6b7090;
+  --mono: 'DM Mono', monospace;
+  --sans: 'Syne', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── HEADER ── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(10,11,14,0.92);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--accent);
+}
+.logo span { color: var(--text); }
+
+nav {
+  display: flex;
+  gap: 4px;
+}
+
+nav button {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-transform: uppercase;
+}
+
+nav button:hover { color: var(--text); border-color: var(--border); }
+nav button.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(200,241,53,0.06);
+}
+
+.status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent2);
+  box-shadow: 0 0 8px var(--accent2);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── LAYOUT ── */
+main { padding: 28px; max-width: 1200px; margin: 0 auto; }
+
+.page { display: none; }
+.page.active { display: block; animation: fadein 0.2s ease; }
+@keyframes fadein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ── GRID ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+@media(max-width:768px) {
+  .grid-2,.grid-3,.grid-4 { grid-template-columns: 1fr; }
+  nav button { padding: 6px 10px; font-size: 11px; }
+  header { padding: 14px 16px; }
+  main { padding: 16px; }
+}
+
+/* ── CARDS ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+  transition: border-color 0.15s;
+}
+.card:hover { border-color: #2a2f45; }
+.card-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.card-value {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.card-value.accent { color: var(--accent); }
+.card-value.green  { color: var(--accent2); }
+.card-value.red    { color: var(--danger); }
+.card-sub {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ── HERO CARD ── */
+.hero-card {
+  background: linear-gradient(135deg, #111318 0%, #151920 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,241,53,0.08) 0%, transparent 70%);
+}
+.hero-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.hero-value {
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: var(--accent);
+  line-height: 1;
+}
+.hero-value sup { font-size: 0.4em; vertical-align: super; letter-spacing: 0; }
+.hero-meta {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+}
+.hero-meta-item { }
+.hero-meta-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.hero-meta-val {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-size: 13px;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin: 28px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── TABLE ── */
+.tbl-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; }
+th {
+  background: var(--surface2);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 12px 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+td {
+  padding: 12px 16px;
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+}
+tr:hover td { background: rgba(255,255,255,0.02); }
+.badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.badge-ok  { background: rgba(79,255,176,0.12); color: var(--accent2); }
+.badge-err { background: rgba(255,79,110,0.12); color: var(--danger); }
+
+/* ── BAR CHART ── */
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.bar-label {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 160px;
+  max-width: 160px;
+}
+.bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--surface2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--accent);
+  transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.bar-val {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  min-width: 72px;
+  text-align: right;
+}
+
+/* ── UPLOAD ZONE ── */
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: 14px;
+  padding: 56px 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+.drop-zone:hover, .drop-zone.dragover {
+  border-color: var(--accent);
+  background: rgba(200,241,53,0.03);
+}
+.drop-icon {
+  font-size: 40px;
+  margin-bottom: 14px;
+  opacity: 0.5;
+}
+.drop-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.drop-sub {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+#fileInput { display: none; }
+
+/* ── RESULT CARD ── */
+.result-card {
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 20px;
+  border: 1px solid;
+  display: none;
+}
+.result-card.ok {
+  background: rgba(79,255,176,0.05);
+  border-color: rgba(79,255,176,0.2);
+}
+.result-card.error {
+  background: rgba(255,79,110,0.05);
+  border-color: rgba(255,79,110,0.2);
+}
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+.result-field { }
+.result-field-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.result-field-val {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ── SPINNER ── */
+.spinner {
+  width: 32px; height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto;
+  display: none;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── INPUTS ── */
+.input-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+input[type=text], input[type=date], input[type=number] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s;
+  min-width: 160px;
+}
+input:focus { border-color: var(--accent); }
+input::placeholder { color: var(--muted); }
+
+.btn {
+  background: var(--accent);
+  color: #0a0b0e;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+.btn:hover { opacity: 0.88; }
+.btn:active { transform: scale(0.97); }
+.btn-ghost {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); background: none; }
+
+/* ── MARGEN DISPLAY ── */
+.margen-display {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin: 20px 0;
+}
+.margen-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+.margen-box-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.margen-box-val {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.semaforo { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-left: 8px; vertical-align: middle; }
+.sem-green { background: var(--accent2); box-shadow: 0 0 8px var(--accent2); }
+.sem-yellow { background: var(--warn); box-shadow: 0 0 8px var(--warn); }
+.sem-red { background: var(--danger); box-shadow: 0 0 8px var(--danger); }
+
+/* ── EMPTY STATE ── */
+.empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--muted);
+}
+.empty-icon { font-size: 36px; margin-bottom: 12px; opacity: 0.4; }
+.empty-text { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* ── LOADING ── */
+.loading-row td {
+  text-align: center;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 32px;
+}
+
+/* ── TOAST ── */
+#toast {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  z-index: 999;
+  max-width: 320px;
+}
+#toast.show { transform: none; opacity: 1; }
+#toast.ok-toast { border-color: rgba(79,255,176,0.3); color: var(--accent2); }
+#toast.err-toast { border-color: rgba(255,79,110,0.3); color: var(--danger); }
+
+/* ── PRICE FORM ── */
+.precio-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 24px;
+}
+.precio-form .form-title {
+  font-size: 13px;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">QUAN<span>TARA</span></div>
+  <nav>
+    <button class="active" onclick="go('inicio')">Inicio</button>
+    <button onclick="go('subir')">Subir</button>
+    <button onclick="go('gastos')">Gastos</button>
+    <button onclick="go('margenes')">Márgenes</button>
+    <button onclick="go('albaranes')">Albaranes</button>
+  </nav>
+  <div class="status-dot" title="API conectada"></div>
+</header>
+
+<main>
+
+<!-- ══════════════════════════════════ INICIO ══ -->
+<div id="page-inicio" class="page active">
+  <div class="hero-card">
+    <div class="hero-label">Gasto total · <span id="hero-mes">—</span></div>
+    <div class="hero-value" id="hero-total"><sup>€</sup>—</div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Albaranes</div>
+        <div class="hero-meta-val" id="hero-nalbaranes">—</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">IVA estimado</div>
+        <div class="hero-meta-val" id="hero-iva">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Top proveedores del mes</div>
+  <div id="top-prov-bars">
+    <div class="empty"><div class="empty-icon">📊</div><div class="empty-text">Cargando...</div></div>
+  </div>
+
+  <div class="section-title">Últimos albaranes</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Fecha</th><th>Proveedor</th><th>Nº Albarán</th>
+        <th style="text-align:right">Total</th><th>Estado</th>
+      </tr></thead>
+      <tbody id="tbody-inicio">
+        <tr class="loading-row"><td colspan="5">Cargando...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ SUBIR ══ -->
+<div id="page-subir" class="page">
+  <div class="drop-zone" id="dropZone">
+    <div class="drop-icon">📄</div>
+    <div class="drop-title">Arrastra el albarán aquí</div>
+    <div class="drop-sub">o haz clic para seleccionar · PDF</div>
+    <input type="file" id="fileInput" accept=".pdf,image/*">
+  </div>
+
+  <div class="spinner" id="uploadSpinner"></div>
+
+  <div class="result-card" id="uploadResult">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+      <strong id="resultTitle" style="font-size:15px"></strong>
+      <span id="resultBadge" class="badge"></span>
+    </div>
+    <div id="resultFallidos" style="font-family:var(--mono);font-size:12px;color:var(--danger);margin-top:6px"></div>
+    <div class="result-grid" id="resultGrid"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ GASTOS ══ -->
+<div id="page-gastos" class="page">
+  <div class="input-row" style="margin-bottom:20px">
+    <input type="date" id="gastos-desde" placeholder="Desde">
+    <input type="date" id="gastos-hasta" placeholder="Hasta">
+    <button class="btn" onclick="loadGastos()">Filtrar</button>
+    <button class="btn btn-ghost" onclick="clearFiltros()">Este mes</button>
+  </div>
+
+  <div class="hero-card" style="padding:22px;margin-bottom:20px">
+    <div class="hero-label">Total período</div>
+    <div class="hero-value" id="gastos-total"><sup>€</sup>—</div>
+  </div>
+
+  <div id="gastos-bars" style="margin-bottom:24px"></div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Proveedor</th>
+        <th style="text-align:right">Albaranes</th>
+        <th style="text-align:right">Total €</th>
+        <th style="text-align:right">IVA €</th>
+        <th>% del total</th>
+      </tr></thead>
+      <tbody id="tbody-gastos">
+        <tr class="loading-row"><td colspan="5">Cargando...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ MÁRGENES ══ -->
+<div id="page-margenes" class="page">
+  <div class="input-row">
+    <input type="text" id="margen-input" placeholder="Ej: coca cola, calamar..." style="flex:1;max-width:360px">
+    <button class="btn" onclick="buscarMargen()">Calcular margen</button>
+  </div>
+
+  <div id="margen-result" style="display:none;margin-top:20px">
+    <div class="section-title" id="margen-producto-title">—</div>
+    <div class="margen-display">
+      <div class="margen-box">
+        <div class="margen-box-label">Coste compra</div>
+        <div class="margen-box-val" id="m-coste" style="color:var(--danger)">—</div>
+      </div>
+      <div class="margen-box">
+        <div class="margen-box-label">Precio venta</div>
+        <div class="margen-box-val" id="m-venta" style="color:var(--accent2)">—</div>
+      </div>
+      <div class="margen-box">
+        <div class="margen-box-label">Margen</div>
+        <div class="margen-box-val" id="m-margen">—</div>
+      </div>
+    </div>
+    <div id="margen-alerta" style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:-8px;margin-bottom:20px"></div>
+  </div>
+
+  <div id="margen-sin-datos" style="display:none">
+    <div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text" id="margen-sin-msg">Sin datos</div></div>
+  </div>
+
+  <div class="precio-form">
+    <div class="form-title">Registrar precio de venta</div>
+    <div class="input-row">
+      <input type="text"   id="pv-desc"   placeholder="Producto" style="flex:1">
+      <input type="number" id="pv-precio" placeholder="€ venta" step="0.01" style="width:120px">
+      <input type="text"   id="pv-unidad" placeholder="ud/bot/caj" style="width:100px">
+      <button class="btn" onclick="registrarPrecioVenta()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ ALBARANES ══ -->
+<div id="page-albaranes" class="page">
+  <div class="input-row" style="margin-bottom:20px">
+    <input type="text" id="alb-filtro" placeholder="Filtrar por proveedor..." style="flex:1;max-width:300px">
+    <button class="btn" onclick="loadAlbaranes()">Buscar</button>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Fecha</th><th>Proveedor</th><th>Nº Albarán</th>
+        <th style="text-align:right">Base</th>
+        <th style="text-align:right">IVA</th>
+        <th style="text-align:right">Total</th>
+        <th>Estado</th>
+      </tr></thead>
+      <tbody id="tbody-albaranes">
+        <tr class="loading-row"><td colspan="7">Cargando...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px">
+    <button class="btn btn-ghost" id="btn-prev" onclick="prevPage()" disabled>← Anterior</button>
+    <span id="pag-info" style="font-family:var(--mono);font-size:12px;color:var(--muted)"></span>
+    <button class="btn btn-ghost" id="btn-next" onclick="nextPage()">Siguiente →</button>
+  </div>
+</div>
+
+</main>
+
+<div id="toast"></div>
+
+<script>
+const API = 'http://localhost:8000/api/v1';
+let albPage = 0;
+const ALB_LIMIT = 15;
+
+// ── Navegación ──────────────────────────────────────────────────
+function go(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  event.currentTarget.classList.add('active');
+  if (name === 'inicio')    loadInicio();
+  if (name === 'gastos')    loadGastos();
+  if (name === 'albaranes') { albPage = 0; loadAlbaranes(); }
+}
+
+// ── Fetch con timeout ───────────────────────────────────────────
+async function apiFetch(url, opts = {}) {
+  const ctrl = new AbortController();
+  const tid = setTimeout(() => ctrl.abort(), 15000);
+  try {
+    const r = await fetch(API + url, { ...opts, signal: ctrl.signal });
+    clearTimeout(tid);
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  } catch(e) {
+    clearTimeout(tid);
+    if (e.name === 'AbortError') throw new Error('Timeout — ¿está el servidor arrancado?');
+    throw e;
+  }
+}
+
+// ── Toast ────────────────────────────────────────────────────────
+function toast(msg, type = 'ok') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `show ${type}-toast`;
+  setTimeout(() => t.className = '', 3200);
+}
+
+// ── Formato ─────────────────────────────────────────────────────
+const fmt = n => n != null ? parseFloat(n).toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2}) : '—';
+const fmtDate = s => {
+  if (!s) return '—';
+  try { return new Date(s).toLocaleDateString('es-ES',{day:'2-digit',month:'2-digit',year:'2-digit'}); }
+  catch { return s.slice(0,10); }
+};
+
+// ══════════════════════════════════════════════════════════════════
+// INICIO
+// ══════════════════════════════════════════════════════════════════
+async function loadInicio() {
+  try {
+    const [res, alb] = await Promise.all([
+      apiFetch('/resumen'),
+      apiFetch('/albaranes?limit=10')
+    ]);
+
+    const d = res.data;
+    document.getElementById('hero-mes').textContent = d.mes || '—';
+    document.getElementById('hero-total').innerHTML = `<sup>€</sup>${fmt(d.gasto_total)}`;
+    document.getElementById('hero-nalbaranes').textContent = d.num_albaranes;
+
+    // Calcular IVA estimado (10% del gasto como proxy rápido)
+    const ivaEst = d.gasto_total ? (d.gasto_total * 0.087).toFixed(2) : '—';
+    document.getElementById('hero-iva').textContent = ivaEst !== '—' ? `€${fmt(ivaEst)}` : '—';
+
+    // Barras proveedores
+    renderBars('top-prov-bars', d.top_proveedores || [], 'proveedor', 'total');
+
+    // Tabla albaranes recientes
+    renderAlbaranTable('tbody-inicio', alb.data || [], 5);
+
+  } catch(e) {
+    toast('Error cargando datos: ' + e.message, 'err');
+  }
+}
+
+function renderBars(containerId, data, labelKey, valKey) {
+  const el = document.getElementById(containerId);
+  if (!data.length) {
+    el.innerHTML = '<div class="empty"><div class="empty-icon">📊</div><div class="empty-text">Sin datos</div></div>';
+    return;
+  }
+  const max = Math.max(...data.map(d => d[valKey] || 0));
+  el.innerHTML = data.map(d => `
+    <div class="bar-row">
+      <div class="bar-label" title="${d[labelKey]}">${d[labelKey]}</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:${max > 0 ? (d[valKey]/max*100).toFixed(1) : 0}%"></div>
+      </div>
+      <div class="bar-val">€${fmt(d[valKey])}</div>
+    </div>
+  `).join('');
+}
+
+function renderAlbaranTable(tbodyId, data, limit) {
+  const tbody = document.getElementById(tbodyId);
+  const rows = limit ? data.slice(0, limit) : data;
+  if (!rows.length) {
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--muted);font-family:var(--mono);font-size:12px;padding:32px">Sin albaranes</td></tr>';
+    return;
+  }
+  tbody.innerHTML = rows.map(a => `
+    <tr>
+      <td style="font-family:var(--mono);font-size:12px;color:var(--muted)">${fmtDate(a.fecha)}</td>
+      <td style="font-weight:600">${a.proveedor || '—'}</td>
+      <td style="font-family:var(--mono);font-size:12px">${a.numero_albaran || '—'}</td>
+      <td style="text-align:right;font-family:var(--mono)">${a.base_imponible != null ? '€'+fmt(a.base_imponible) : '—'}</td>
+      <td style="text-align:right;font-family:var(--mono);color:var(--muted)">${a.iva_total != null ? '€'+fmt(a.iva_total) : '—'}</td>
+      <td style="text-align:right;font-family:var(--mono);font-weight:700;color:var(--accent)">${a.total != null ? '€'+fmt(a.total) : '—'}</td>
+      <td><span class="badge ${a.procesado_ok ? 'badge-ok' : 'badge-err'}">${a.procesado_ok ? '✓ OK' : '⚠ Revisar'}</span></td>
+    </tr>
+  `).join('');
+}
+
+// ══════════════════════════════════════════════════════════════════
+// SUBIR
+// ══════════════════════════════════════════════════════════════════
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+
+dropZone.addEventListener('click', () => fileInput.click());
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  const f = e.dataTransfer.files[0];
+  if (f) uploadFile(f);
+});
+fileInput.addEventListener('change', () => {
+  if (fileInput.files[0]) uploadFile(fileInput.files[0]);
+});
+
+async function uploadFile(file) {
+  const spinner  = document.getElementById('uploadSpinner');
+  const result   = document.getElementById('uploadResult');
+  result.style.display = 'none';
+  spinner.style.display = 'block';
+
+  const fd = new FormData();
+  fd.append('file', file);
+
+  try {
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 60000);
+    const r = await fetch(API + '/upload', { method: 'POST', body: fd, signal: ctrl.signal });
+    clearTimeout(tid);
+    const json = await r.json();
+    spinner.style.display = 'none';
+
+    if (!r.ok || !json.success) {
+      showUploadResult(false, null, json.detail || 'Error desconocido');
+      return;
+    }
+    showUploadResult(true, json.data);
+    toast('Albarán procesado ✓', 'ok');
+  } catch(e) {
+    spinner.style.display = 'none';
+    showUploadResult(false, null, e.name === 'AbortError' ? 'Timeout — el OCR tardó demasiado' : e.message);
+  }
+  fileInput.value = '';
+}
+
+function showUploadResult(ok, data, errMsg) {
+  const el = document.getElementById('uploadResult');
+  el.className = `result-card ${ok ? 'ok' : 'error'}`;
+  el.style.display = 'block';
+
+  document.getElementById('resultTitle').textContent = ok
+    ? (data.proveedor || 'Proveedor') + ' — ' + (data.numero_albaran || '—')
+    : 'Error al procesar';
+
+  const badge = document.getElementById('resultBadge');
+  if (ok) {
+    badge.textContent = data.procesado_ok ? '✓ Completo' : '⚠ Revisar';
+    badge.className   = `badge ${data.procesado_ok ? 'badge-ok' : 'badge-err'}`;
+  } else {
+    badge.textContent = '✗ Fallo'; badge.className = 'badge badge-err';
+  }
+
+  const fallidos = document.getElementById('resultFallidos');
+  fallidos.textContent = (ok && data.campos_fallidos?.length)
+    ? 'Campos pendientes: ' + data.campos_fallidos.join(', ')
+    : (!ok ? errMsg : '');
+
+  const grid = document.getElementById('resultGrid');
+  if (ok) {
+    const fields = [
+      ['Fecha',    fmtDate(data.fecha)],
+      ['Base imp.','€' + fmt(data.base_imponible)],
+      ['IVA',      '€' + fmt(data.iva_total)],
+      ['Total',    '€' + fmt(data.total)],
+    ];
+    if (data.productos?.length) fields.push(['Productos', data.productos.length + ' líneas']);
+    grid.innerHTML = fields.map(([l,v]) => `
+      <div class="result-field">
+        <div class="result-field-label">${l}</div>
+        <div class="result-field-val">${v}</div>
+      </div>`).join('');
+  } else { grid.innerHTML = ''; }
+}
+
+// ══════════════════════════════════════════════════════════════════
+// GASTOS
+// ══════════════════════════════════════════════════════════════════
+function clearFiltros() {
+  document.getElementById('gastos-desde').value = '';
+  document.getElementById('gastos-hasta').value = '';
+  loadGastos();
+}
+
+async function loadGastos() {
+  const desde = document.getElementById('gastos-desde').value;
+  const hasta = document.getElementById('gastos-hasta').value;
+  let url = '/gasto-proveedores';
+  const params = [];
+  if (desde) params.push('desde=' + desde);
+  if (hasta) params.push('hasta=' + hasta);
+  if (params.length) url += '?' + params.join('&');
+
+  try {
+    const json = await apiFetch(url);
+    const data = json.data || [];
+    const totalPeriodo = json.total_periodo || 0;
+
+    document.getElementById('gastos-total').innerHTML = `<sup>€</sup>${fmt(totalPeriodo)}`;
+
+    // Barras
+    renderBars('gastos-bars', data, 'proveedor', 'total');
+
+    // Tabla con % del total
+    const tbody = document.getElementById('tbody-gastos');
+    if (!data.length) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted);font-family:var(--mono);font-size:12px;padding:32px">Sin datos en el período</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = data.map(r => {
+      const pct = totalPeriodo > 0 ? ((r.total / totalPeriodo) * 100).toFixed(1) : 0;
+      return `<tr>
+        <td style="font-weight:600">${r.proveedor}</td>
+        <td style="text-align:right;font-family:var(--mono)">${r.albaranes}</td>
+        <td style="text-align:right;font-family:var(--mono);color:var(--accent);font-weight:700">€${fmt(r.total)}</td>
+        <td style="text-align:right;font-family:var(--mono);color:var(--muted)">€${fmt(r.iva)}</td>
+        <td>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div class="bar-track" style="width:80px">
+              <div class="bar-fill" style="width:${pct}%"></div>
+            </div>
+            <span style="font-family:var(--mono);font-size:12px;color:var(--muted)">${pct}%</span>
+          </div>
+        </td>
+      </tr>`;
+    }).join('');
+
+  } catch(e) {
+    toast('Error gastos: ' + e.message, 'err');
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════
+// MÁRGENES
+// ══════════════════════════════════════════════════════════════════
+document.getElementById('margen-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') buscarMargen();
+});
+
+async function buscarMargen() {
+  const prod = document.getElementById('margen-input').value.trim();
+  if (!prod) return;
+  document.getElementById('margen-result').style.display = 'none';
+  document.getElementById('margen-sin-datos').style.display = 'none';
+
+  try {
+    const json = await apiFetch('/margen/' + encodeURIComponent(prod));
+    const d = json.data;
+
+    if (d.estado === 'faltan_datos') {
+      const falta = d.falta || [];
+      document.getElementById('margen-sin-msg').textContent =
+        'Faltan datos: ' + falta.join(', ') +
+        (falta.includes('precio_venta') ? ' — Registra el precio de venta abajo' : '');
+      document.getElementById('margen-sin-datos').style.display = 'block';
+      return;
+    }
+
+    document.getElementById('margen-producto-title').textContent = d.producto;
+    document.getElementById('m-coste').textContent = d.coste_unitario != null ? '€' + fmt(d.coste_unitario) : '—';
+    document.getElementById('m-venta').textContent = d.precio_venta != null ? '€' + fmt(d.precio_venta) : '—';
+
+    const pct = d.margen_porcentaje;
+    const semClass = pct >= 30 ? 'sem-green' : pct >= 10 ? 'sem-yellow' : 'sem-red';
+    const color    = pct >= 30 ? 'var(--accent2)' : pct >= 10 ? 'var(--warn)' : 'var(--danger)';
+    document.getElementById('m-margen').style.color = color;
+    document.getElementById('m-margen').innerHTML =
+      `€${fmt(d.margen_euros)} <span style="font-size:16px;font-weight:400">(${fmt(pct)}%)</span><span class="semaforo ${semClass}"></span>`;
+
+    const label = pct >= 30 ? 'Margen saludable' : pct >= 10 ? 'Margen ajustado' : 'Margen bajo — revisar precio';
+    document.getElementById('margen-alerta').textContent = label;
+
+    document.getElementById('margen-result').style.display = 'block';
+    // Prellenar form con el nombre buscado
+    document.getElementById('pv-desc').value = prod;
+
+  } catch(e) {
+    toast('Error: ' + e.message, 'err');
+  }
+}
+
+async function registrarPrecioVenta() {
+  const desc   = document.getElementById('pv-desc').value.trim();
+  const precio = parseFloat(document.getElementById('pv-precio').value);
+  const unidad = document.getElementById('pv-unidad').value.trim() || 'ud';
+
+  if (!desc || isNaN(precio)) { toast('Rellena descripción y precio', 'err'); return; }
+
+  try {
+    await apiFetch('/precio-venta', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ descripcion: desc, precio_venta: precio, unidad })
+    });
+    toast(`Precio de venta guardado: ${desc} → €${fmt(precio)}`, 'ok');
+    document.getElementById('pv-precio').value = '';
+    // Recalcular margen si era lo que estábamos viendo
+    if (document.getElementById('margen-input').value.trim()) buscarMargen();
+  } catch(e) {
+    toast('Error: ' + e.message, 'err');
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════
+// ALBARANES
+// ══════════════════════════════════════════════════════════════════
+async function loadAlbaranes() {
+  const filtro = document.getElementById('alb-filtro').value.trim();
+  const skip   = albPage * ALB_LIMIT;
+  let url = `/albaranes?limit=${ALB_LIMIT}&skip=${skip}`;
+  if (filtro) url += `&proveedor=${encodeURIComponent(filtro)}`;
+
+  try {
+    const json = await apiFetch(url);
+    const data = (json.data || []);
+    renderAlbaranTable('tbody-albaranes', data, 0);
+
+    document.getElementById('btn-prev').disabled = albPage === 0;
+    document.getElementById('btn-next').disabled = data.length < ALB_LIMIT;
+    document.getElementById('pag-info').textContent =
+      `Página ${albPage + 1} · ${data.length} registros`;
+  } catch(e) {
+    toast('Error albaranes: ' + e.message, 'err');
+  }
+}
+
+function prevPage() { if (albPage > 0) { albPage--; loadAlbaranes(); } }
+function nextPage() { albPage++; loadAlbaranes(); }
+
+// ── Carga inicial ───────────────────────────────────────────────
+loadInicio();
+</script>
+</body>
+</html>
+<!-- 
+INSTALACIÓN:
+1. Copia este archivo a: E:\Quantara\static\index.html
+2. Añade esto en E:\Quantara\quantara\main.py:
+
+    from fastapi.staticfiles import StaticFiles
+    import os
+
+    STATIC_DIR = os.path.join(os.path.dirname(__file__), "..", "static")
+    app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="static")
+
+   IMPORTANTE: el app.mount("/", ...) debe ser la ÚLTIMA línea de main.py,
+   después de app.include_router(...)
+
+3. Abre http://localhost:8000/ en el navegador
+-->
