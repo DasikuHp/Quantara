@@ -167,4 +167,19 @@ curl -X POST "http://127.0.0.1:8000/api/v1/precio-venta" \
       "precio_venta": 2.50, 
       "unidad": "ud"
       }'
-```
+
+## 📝 LICENCIA - Business Source License 1.1 (BSL 1.1)
+
+**Quantara** está protegido bajo la **BSL 1.1**.
+
+* **Permitido**: Uso personal, investigación, desarrollo interno y contribuciones.
+* **Prohibido**: Uso comercial directo, hosting como SaaS, redistribución o creación de productos competidores sin licencia.
+
+📧 **Contacto Comercial**: [dasikuhp@gmail.com](mailto:dasikuhp@gmail.com)
+
+---
+
+<div align="center">
+  <p>Autor: <strong>DasikuHp</strong> | Versión: Quantara0-alfa | Actualizado: 2026-04-02</p>
+  <p>🚀 <em>Ready to revolutionize local development.</em></p>
+</div>
