@@ -1,0 +1,433 @@
+{
+ "doc": "HortofruitLevantealbaran2.pdf",
+ "lines": [
+  {
+   "text": "SERV.HORTOFRUTICOLAS DE LEVANTE,S.L",
+   "conf": 0.97
+  },
+  {
+   "text": "sh",
+   "conf": 1.0
+  },
+  {
+   "text": "MERCOVASA,PTOS.80-81",
+   "conf": 0.96
+  },
+  {
+   "text": "46540EL PUIG(VALENCIA",
+   "conf": 0.95
+  },
+  {
+   "text": "C.I.F.B-98334378",
+   "conf": 0.98
+  },
+  {
+   "text": "wante",
+   "conf": 0.93
+  },
+  {
+   "text": "TEL.: 961 472 619",
+   "conf": 0.97
+  },
+  {
+   "text": "FAX961472461",
+   "conf": 1.0
+  },
+  {
+   "text": "CLIENTE: 43002982",
+   "conf": 0.95
+  },
+  {
+   "text": "RGSEAA:21.026407/V",
+   "conf": 0.96
+  },
+  {
+   "text": "LACUBIERTA MAR SL",
+   "conf": 0.96
+  },
+  {
+   "text": "CAMINO CANAL NUM 91",
+   "conf": 0.97
+  },
+  {
+   "text": "46024 VALENCIA (VALENCIA)",
+   "conf": 0.97
+  },
+  {
+   "text": "C.I.F B75717793",
+   "conf": 0.98
+  },
+  {
+   "text": "NOALBARAN",
+   "conf": 0.98
+  },
+  {
+   "text": "FECHA",
+   "conf": 1.0
+  },
+  {
+   "text": "736 CUBIERTA MAR",
+   "conf": 1.0
+  },
+  {
+   "text": "0/ 26008946 07/03/26",
+   "conf": 0.97
+  },
+  {
+   "text": "Bultos",
+   "conf": 0.98
+  },
+  {
+   "text": "Descripci¾n",
+   "conf": 0.97
+  },
+  {
+   "text": "Origen",
+   "conf": 0.99
+  },
+  {
+   "text": "Trazabilidad",
+   "conf": 1.0
+  },
+  {
+   "text": "Bruto",
+   "conf": 0.99
+  },
+  {
+   "text": "Tara",
+   "conf": 1.0
+  },
+  {
+   "text": "Neto",
+   "conf": 1.0
+  },
+  {
+   "text": "Precio%IVA",
+   "conf": 0.97
+  },
+  {
+   "text": "Importe",
+   "conf": 1.0
+  },
+  {
+   "text": "][Patata Cortada Casera Agria NATUBER",
+   "conf": 0.96
+  },
+  {
+   "text": "Espana",
+   "conf": 0.98
+  },
+  {
+   "text": "400003111038260103-4198409",
+   "conf": 0.98
+  },
+  {
+   "text": "5,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "5,00",
+   "conf": 0.97
+  },
+  {
+   "text": "1,700",
+   "conf": 1.0
+  },
+  {
+   "text": "4,00",
+   "conf": 0.98
+  },
+  {
+   "text": "8,50",
+   "conf": 0.98
+  },
+  {
+   "text": "Patata Pelada Brava AGRIA NATUBER",
+   "conf": 0.99
+  },
+  {
+   "text": "Espana",
+   "conf": 0.97
+  },
+  {
+   "text": "400003111030260214-4251626",
+   "conf": 0.99
+  },
+  {
+   "text": "5,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "5,00",
+   "conf": 0.98
+  },
+  {
+   "text": "1,600",
+   "conf": 1.0
+  },
+  {
+   "text": "4,00",
+   "conf": 0.99
+  },
+  {
+   "text": "8,00",
+   "conf": 0.98
+  },
+  {
+   "text": "Lechugas Vivas 1a Caja 8 pzs",
+   "conf": 0.99
+  },
+  {
+   "text": "Espana",
+   "conf": 0.98
+  },
+  {
+   "text": "400003190910260302-4273947",
+   "conf": 1.0
+  },
+  {
+   "text": "8,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "8,00",
+   "conf": 1.0
+  },
+  {
+   "text": "1,600",
+   "conf": 1.0
+  },
+  {
+   "text": "4,00",
+   "conf": 1.0
+  },
+  {
+   "text": "12,80",
+   "conf": 0.99
+  },
+  {
+   "text": "Grosella Bandeja.1a 125 g",
+   "conf": 0.98
+  },
+  {
+   "text": "400000892901260219-4258230",
+   "conf": 1.0
+  },
+  {
+   "text": "1,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "1,00",
+   "conf": 1.0
+  },
+  {
+   "text": "3,360",
+   "conf": 1.0
+  },
+  {
+   "text": "4,00",
+   "conf": 1.0
+  },
+  {
+   "text": "3,36",
+   "conf": 1.0
+  },
+  {
+   "text": "Tomate Rosa GRANEL",
+   "conf": 1.0
+  },
+  {
+   "text": "Espana",
+   "conf": 0.93
+  },
+  {
+   "text": "400001950220260123-4223005",
+   "conf": 1.0
+  },
+  {
+   "text": "1,10",
+   "conf": 1.0
+  },
+  {
+   "text": "0,00",
+   "conf": 0.98
+  },
+  {
+   "text": "1,10",
+   "conf": 0.99
+  },
+  {
+   "text": "3,200",
+   "conf": 1.0
+  },
+  {
+   "text": "4,00",
+   "conf": 1.0
+  },
+  {
+   "text": "3,52",
+   "conf": 0.99
+  },
+  {
+   "text": "1Azafran en Hebra",
+   "conf": 0.98
+  },
+  {
+   "text": "0.4 gr",
+   "conf": 0.98
+  },
+  {
+   "text": "Espana",
+   "conf": 0.95
+  },
+  {
+   "text": "400000351350260113-4208217",
+   "conf": 1.0
+  },
+  {
+   "text": "1,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "1,00",
+   "conf": 1.0
+  },
+  {
+   "text": "5,070",
+   "conf": 1.0
+  },
+  {
+   "text": "10,00",
+   "conf": 1.0
+  },
+  {
+   "text": "5,07",
+   "conf": 0.98
+  },
+  {
+   "text": "IMP.BRUTO",
+   "conf": 0.98
+  },
+  {
+   "text": "%DTO",
+   "conf": 0.94
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 0.99
+  },
+  {
+   "text": "B.IMPONIBLE",
+   "conf": 0.99
+  },
+  {
+   "text": "%IVA",
+   "conf": 0.91
+  },
+  {
+   "text": "I.V.A",
+   "conf": 0.98
+  },
+  {
+   "text": "%RE",
+   "conf": 0.99
+  },
+  {
+   "text": "R.E.",
+   "conf": 0.99
+  },
+  {
+   "text": "TOTAL ALBARAN",
+   "conf": 0.96
+  },
+  {
+   "text": "5,07",
+   "conf": 0.99
+  },
+  {
+   "text": "10,0",
+   "conf": 1.0
+  },
+  {
+   "text": "0,51",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "41,25",
+   "conf": 0.98
+  },
+  {
+   "text": "0,0",
+   "conf": 0.97
+  },
+  {
+   "text": "0,00",
+   "conf": 0.98
+  },
+  {
+   "text": "36,18",
+   "conf": 0.93
+  },
+  {
+   "text": "4,0",
+   "conf": 0.99
+  },
+  {
+   "text": "1,45",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 0.98
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "43,21",
+   "conf": 0.99
+  },
+  {
+   "text": "OBSERVACIONES",
+   "conf": 0.99
+  },
+  {
+   "text": "Operaci¾n asegurada en",
+   "conf": 0.99
+  },
+  {
+   "text": "CrÚditoy Cauci¾n",
+   "conf": 0.95
+  }
+ ]
+}

@@ -1,0 +1,381 @@
+{
+ "doc": "divinsdiaresaalbaran.pdf",
+ "lines": [
+  {
+   "text": "MONTEABETION",
+   "conf": 0.8
+  },
+  {
+   "text": "ARIPTA",
+   "conf": 0.91
+  },
+  {
+   "text": "EXCELSIA",
+   "conf": 0.95
+  },
+  {
+   "text": "TERRAS CAUDA",
+   "conf": 0.9
+  },
+  {
+   "text": "MARQUES-RISCAL",
+   "conf": 0.93
+  },
+  {
+   "text": "Yaldruero",
+   "conf": 0.89
+  },
+  {
+   "text": "Valdesil",
+   "conf": 0.99
+  },
+  {
+   "text": "DIVINS DIRESA,S.L.U.",
+   "conf": 0.95
+  },
+  {
+   "text": "RODMA",
+   "conf": 1.0
+  },
+  {
+   "text": "Av. Comarques Pais Valencia, 76",
+   "conf": 0.95
+  },
+  {
+   "text": "C.I.F.B-97898548",
+   "conf": 0.98
+  },
+  {
+   "text": "TelÚf.961920360-Fax 961920131",
+   "conf": 0.97
+  },
+  {
+   "text": "LACUBIERTA MAR SL",
+   "conf": 0.96
+  },
+  {
+   "text": "46930 QUART DE POBLET (VALENCIA)",
+   "conf": 0.93
+  },
+  {
+   "text": "LA CUBIERTA",
+   "conf": 0.93
+  },
+  {
+   "text": "COD.CLIENTE",
+   "conf": 0.92
+  },
+  {
+   "text": "ALBARAN",
+   "conf": 0.94
+  },
+  {
+   "text": "FORMA DE PAGO",
+   "conf": 0.94
+  },
+  {
+   "text": "CAMINO CANAL91 DARSENA LEV LO",
+   "conf": 0.94
+  },
+  {
+   "text": "46024 VALENCIA (VALENCIA)",
+   "conf": 0.96
+  },
+  {
+   "text": "30535",
+   "conf": 1.0
+  },
+  {
+   "text": "A26-0653",
+   "conf": 1.0
+  },
+  {
+   "text": "Albaran Efecto",
+   "conf": 0.98
+  },
+  {
+   "text": "B75717793",
+   "conf": 1.0
+  },
+  {
+   "text": "Põgina 1",
+   "conf": 0.96
+  },
+  {
+   "text": "FECHA 2/02/2026",
+   "conf": 0.97
+  },
+  {
+   "text": "Ruta preventa951",
+   "conf": 0.98
+  },
+  {
+   "text": "PRECIO",
+   "conf": 0.96
+  },
+  {
+   "text": "PUNTO",
+   "conf": 0.99
+  },
+  {
+   "text": "CODIGO",
+   "conf": 0.99
+  },
+  {
+   "text": "DESCRIPCION",
+   "conf": 1.0
+  },
+  {
+   "text": "CANTDAD",
+   "conf": 0.98
+  },
+  {
+   "text": "UNITARIO",
+   "conf": 0.95
+  },
+  {
+   "text": "IMPORTE BRUTO",
+   "conf": 0.94
+  },
+  {
+   "text": "DESCUENTOS",
+   "conf": 0.97
+  },
+  {
+   "text": "VERDE",
+   "conf": 0.99
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 1.0
+  },
+  {
+   "text": "1807 TAMBORA 3/4(6)",
+   "conf": 0.93
+  },
+  {
+   "text": "57,60",
+   "conf": 0.96
+  },
+  {
+   "text": "57,60",
+   "conf": 0.99
+  },
+  {
+   "text": "17,28",
+   "conf": 0.98
+  },
+  {
+   "text": "40,32",
+   "conf": 0.99
+  },
+  {
+   "text": "6340 MALPASTOR 3/4(6)",
+   "conf": 0.97
+  },
+  {
+   "text": "37,85",
+   "conf": 0.98
+  },
+  {
+   "text": "37,85",
+   "conf": 0.96
+  },
+  {
+   "text": "5,68",
+   "conf": 0.94
+  },
+  {
+   "text": "32,17",
+   "conf": 0.99
+  },
+  {
+   "text": "1850HERACLIO ALFARO 3/4(6)",
+   "conf": 0.95
+  },
+  {
+   "text": "33,25",
+   "conf": 0.98
+  },
+  {
+   "text": "33,25",
+   "conf": 0.97
+  },
+  {
+   "text": "10,97",
+   "conf": 0.99
+  },
+  {
+   "text": "22,28",
+   "conf": 0.99
+  },
+  {
+   "text": "2655MONTEABELLON ROBLE 3/4 (6)",
+   "conf": 0.96
+  },
+  {
+   "text": "46,48",
+   "conf": 0.99
+  },
+  {
+   "text": "46,48",
+   "conf": 0.99
+  },
+  {
+   "text": "11,62",
+   "conf": 0.98
+  },
+  {
+   "text": "34,86",
+   "conf": 1.0
+  },
+  {
+   "text": "2657MONTEABELLONRUEDAVERDEJO(6)",
+   "conf": 0.98
+  },
+  {
+   "text": "35.05",
+   "conf": 0.93
+  },
+  {
+   "text": "35,05",
+   "conf": 0.93
+  },
+  {
+   "text": "10,52",
+   "conf": 0.99
+  },
+  {
+   "text": "24,53",
+   "conf": 0.98
+  },
+  {
+   "text": "TOTAL BRUTO",
+   "conf": 0.96
+  },
+  {
+   "text": "TOTAL DTOS.",
+   "conf": 0.95
+  },
+  {
+   "text": "BASE IMPONIBLE",
+   "conf": 0.96
+  },
+  {
+   "text": "I.V.A.",
+   "conf": 0.92
+  },
+  {
+   "text": "REC.EQUIVALENCIA",
+   "conf": 0.92
+  },
+  {
+   "text": "%",
+   "conf": 1.0
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 1.0
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 0.99
+  },
+  {
+   "text": "210,23",
+   "conf": 1.0
+  },
+  {
+   "text": "56,07",
+   "conf": 0.98
+  },
+  {
+   "text": "154,16",
+   "conf": 0.99
+  },
+  {
+   "text": "21%",
+   "conf": 1.0
+  },
+  {
+   "text": "32,37",
+   "conf": 0.99
+  },
+  {
+   "text": "IMPORTE TOTAL",
+   "conf": 0.95
+  },
+  {
+   "text": "186,53",
+   "conf": 0.97
+  },
+  {
+   "text": "COD.CANT.",
+   "conf": 0.93
+  },
+  {
+   "text": "CONCEPTO CARGO",
+   "conf": 0.98
+  },
+  {
+   "text": "PRECIO",
+   "conf": 0.95
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 0.99
+  },
+  {
+   "text": "COD.CANT.",
+   "conf": 0.97
+  },
+  {
+   "text": "CONCEPTO ABONO",
+   "conf": 0.96
+  },
+  {
+   "text": "PRECIO",
+   "conf": 0.97
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 0.99
+  },
+  {
+   "text": "IMP.CARGO",
+   "conf": 0.97
+  },
+  {
+   "text": "IMP.ABONO",
+   "conf": 0.98
+  },
+  {
+   "text": "DIFERENCIA",
+   "conf": 0.99
+  },
+  {
+   "text": "L.V.A.",
+   "conf": 0.9
+  },
+  {
+   "text": "REC.EQUIV.",
+   "conf": 0.97
+  },
+  {
+   "text": "TOTAL",
+   "conf": 1.0
+  },
+  {
+   "text": "IMPORTETOTAL",
+   "conf": 0.98
+  },
+  {
+   "text": "GRAN TOTAL",
+   "conf": 0.97
+  },
+  {
+   "text": "Inc.R.M.de ValenciaTmo 8.698,Libro 5.985,Hoja V-12.495,Foli153,lnscrip.1",
+   "conf": 0.78
+  }
+ ]
+}

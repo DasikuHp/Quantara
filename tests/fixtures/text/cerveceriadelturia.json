@@ -1,0 +1,973 @@
+{
+ "doc": "cerveceriadelturia.pdf",
+ "lines": [
+  {
+   "text": "Forma de Pago",
+   "conf": 0.97
+  },
+  {
+   "text": "Raz¾n Social",
+   "conf": 0.94
+  },
+  {
+   "text": "LA CUBIERTADEL MAR.S.L.",
+   "conf": 0.91
+  },
+  {
+   "text": "CREDITO A 30 dias",
+   "conf": 0.9
+  },
+  {
+   "text": "B75717793",
+   "conf": 1.0
+  },
+  {
+   "text": "CAMI EL CANAL 91",
+   "conf": 0.95
+  },
+  {
+   "text": "Recibo Domiciliado",
+   "conf": 0.98
+  },
+  {
+   "text": "Fecha vto04.03.2026",
+   "conf": 0.98
+  },
+  {
+   "text": "46002,VALENCIA",
+   "conf": 1.0
+  },
+  {
+   "text": "VALENCIA",
+   "conf": 1.0
+  },
+  {
+   "text": "VALENCIA",
+   "conf": 1.0
+  },
+  {
+   "text": "Resp:",
+   "conf": 0.99
+  },
+  {
+   "text": "Horario Servicio:",
+   "conf": 1.0
+  },
+  {
+   "text": "CERVECERA DEL TURIA S.L",
+   "conf": 0.95
+  },
+  {
+   "text": "608785974-",
+   "conf": 0.96
+  },
+  {
+   "text": "POL INDOLIVERAL,NAVES 3 Y 42",
+   "conf": 0.95
+  },
+  {
+   "text": "Direcci¾n Entrega",
+   "conf": 1.0
+  },
+  {
+   "text": "Albarõn-Factura",
+   "conf": 0.97
+  },
+  {
+   "text": "LA CUBIERTA",
+   "conf": 0.94
+  },
+  {
+   "text": "46190,RIBA ROJA DEL TURIA",
+   "conf": 0.97
+  },
+  {
+   "text": "CAMINO CANAL -AMPLIACION",
+   "conf": 0.99
+  },
+  {
+   "text": "961300605",
+   "conf": 1.0
+  },
+  {
+   "text": "RCNV-MUELLE DE PONIENTE 91",
+   "conf": 0.97
+  },
+  {
+   "text": "B67217125",
+   "conf": 1.0
+  },
+  {
+   "text": "46024,VALENCIA",
+   "conf": 1.0
+  },
+  {
+   "text": "ddivalencia@ddidistribucion.com",
+   "conf": 1.0
+  },
+  {
+   "text": "VALENCIA",
+   "conf": 1.0
+  },
+  {
+   "text": "1/1",
+   "conf": 1.0
+  },
+  {
+   "text": "icired",
+   "conf": 0.99
+  },
+  {
+   "text": "N³mero",
+   "conf": 0.97
+  },
+  {
+   "text": "Albarõn",
+   "conf": 0.94
+  },
+  {
+   "text": "Fecha",
+   "conf": 1.0
+  },
+  {
+   "text": "Cliente",
+   "conf": 1.0
+  },
+  {
+   "text": "N.░Carga",
+   "conf": 0.93
+  },
+  {
+   "text": "Viaje",
+   "conf": 0.99
+  },
+  {
+   "text": "Cial.",
+   "conf": 0.99
+  },
+  {
+   "text": "Vend.",
+   "conf": 0.99
+  },
+  {
+   "text": "Ruta",
+   "conf": 1.0
+  },
+  {
+   "text": "Rep.",
+   "conf": 0.98
+  },
+  {
+   "text": "7587254989",
+   "conf": 1.0
+  },
+  {
+   "text": "828097291",
+   "conf": 0.97
+  },
+  {
+   "text": "04.03.2026",
+   "conf": 1.0
+  },
+  {
+   "text": "9100688875",
+   "conf": 1.0
+  },
+  {
+   "text": "11529357",
+   "conf": 1.0
+  },
+  {
+   "text": "01",
+   "conf": 0.99
+  },
+  {
+   "text": "543965",
+   "conf": 1.0
+  },
+  {
+   "text": "543965",
+   "conf": 1.0
+  },
+  {
+   "text": "DR0336",
+   "conf": 0.99
+  },
+  {
+   "text": "850265",
+   "conf": 1.0
+  },
+  {
+   "text": "Producto",
+   "conf": 1.0
+  },
+  {
+   "text": "UM",
+   "conf": 0.99
+  },
+  {
+   "text": "Cdad. Precio Dto",
+   "conf": 1.0
+  },
+  {
+   "text": "P.V.",
+   "conf": 1.0
+  },
+  {
+   "text": "1.P.",
+   "conf": 0.87
+  },
+  {
+   "text": "1.A. Importe IVA",
+   "conf": 0.94
+  },
+  {
+   "text": "Promoci¾n",
+   "conf": 0.98
+  },
+  {
+   "text": "ED13",
+   "conf": 1.0
+  },
+  {
+   "text": "ESTRELLA DAMM 1/3 RET. PP",
+   "conf": 1.0
+  },
+  {
+   "text": "CAJ",
+   "conf": 1.0
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "34,23",
+   "conf": 0.97
+  },
+  {
+   "text": "16,30",
+   "conf": 1.0
+  },
+  {
+   "text": "0,02",
+   "conf": 0.97
+  },
+  {
+   "text": "17,95",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 0.97
+  },
+  {
+   "text": "TNT13",
+   "conf": 1.0
+  },
+  {
+   "text": "TURIA 0,0 TOSTADA 1/3 RET",
+   "conf": 0.96
+  },
+  {
+   "text": "CAJ",
+   "conf": 0.99
+  },
+  {
+   "text": "40,38",
+   "conf": 0.99
+  },
+  {
+   "text": "20,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,02",
+   "conf": 0.96
+  },
+  {
+   "text": "20,40",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 0.96
+  },
+  {
+   "text": "ED30",
+   "conf": 1.0
+  },
+  {
+   "text": "ESTRELLA DAMM BARRIL 30",
+   "conf": 0.98
+  },
+  {
+   "text": "BRL",
+   "conf": 1.0
+  },
+  {
+   "text": "129,20",
+   "conf": 1.0
+  },
+  {
+   "text": "62,35",
+   "conf": 0.99
+  },
+  {
+   "text": "66,85",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 0.98
+  },
+  {
+   "text": "FL12",
+   "conf": 0.98
+  },
+  {
+   "text": "FUENTE LIVIANA 1/2 VIDRIO RET. CAJ",
+   "conf": 0.97
+  },
+  {
+   "text": "13,97",
+   "conf": 0.98
+  },
+  {
+   "text": "45,85",
+   "conf": 1.0
+  },
+  {
+   "text": "5",
+   "conf": 1.0
+  },
+  {
+   "text": "24,00",
+   "conf": 0.99
+  },
+  {
+   "text": "10,00",
+   "conf": 0.99
+  },
+  {
+   "text": "PI13",
+   "conf": 0.93
+  },
+  {
+   "text": "AGUA PIRINEA 1/3 GAS RET",
+   "conf": 0.99
+  },
+  {
+   "text": "CAJ",
+   "conf": 1.0
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "14,60",
+   "conf": 1.0
+  },
+  {
+   "text": "13,36",
+   "conf": 1.0
+  },
+  {
+   "text": "15,84",
+   "conf": 1.0
+  },
+  {
+   "text": "10,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0LT0034",
+   "conf": 0.95
+  },
+  {
+   "text": "LETONA SEMI ESPEC",
+   "conf": 0.95
+  },
+  {
+   "text": "CAJ",
+   "conf": 1.0
+  },
+  {
+   "text": "T1,31",
+   "conf": 0.86
+  },
+  {
+   "text": "2,54",
+   "conf": 0.99
+  },
+  {
+   "text": "0.22",
+   "conf": 0.99
+  },
+  {
+   "text": "-8,99",
+   "conf": 0.97
+  },
+  {
+   "text": "4,00",
+   "conf": 0.94
+  },
+  {
+   "text": "HOSTELERIA PET 1,5L 6U",
+   "conf": 0.98
+  },
+  {
+   "text": "0CF0355",
+   "conf": 0.99
+  },
+  {
+   "text": "BONKA ESSENTIA",
+   "conf": 0.97
+  },
+  {
+   "text": "UN",
+   "conf": 0.99
+  },
+  {
+   "text": "1.",
+   "conf": 0.97
+  },
+  {
+   "text": "23,65",
+   "conf": 1.0
+  },
+  {
+   "text": "13,54",
+   "conf": 1.0
+  },
+  {
+   "text": "10,11",
+   "conf": 0.99
+  },
+  {
+   "text": "10,00",
+   "conf": 0.99
+  },
+  {
+   "text": "DESCAFEINADO GRANO 500G",
+   "conf": 1.0
+  },
+  {
+   "text": "0CF1034",
+   "conf": 0.99
+  },
+  {
+   "text": "BONKA ESSENTIA ECOLOGICO",
+   "conf": 0.98
+  },
+  {
+   "text": "UN",
+   "conf": 0.99
+  },
+  {
+   "text": "3",
+   "conf": 1.0
+  },
+  {
+   "text": "51,25",
+   "conf": 1.0
+  },
+  {
+   "text": "69,76",
+   "conf": 0.99
+  },
+  {
+   "text": "83,99",
+   "conf": 1.0
+  },
+  {
+   "text": "10,00",
+   "conf": 0.99
+  },
+  {
+   "text": "GRANO 1KG",
+   "conf": 0.98
+  },
+  {
+   "text": "FTI15B24",
+   "conf": 0.99
+  },
+  {
+   "text": "FEVERTREE INDIAN TONIC 1/5",
+   "conf": 0.98
+  },
+  {
+   "text": "CAJ",
+   "conf": 1.0
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "33,23",
+   "conf": 0.99
+  },
+  {
+   "text": "0,53",
+   "conf": 1.0
+  },
+  {
+   "text": "0,01",
+   "conf": 0.98
+  },
+  {
+   "text": "67,00",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00 81658986",
+   "conf": 0.96
+  },
+  {
+   "text": "BAND-24U",
+   "conf": 0.99
+  },
+  {
+   "text": "NTL13B24",
+   "conf": 1.0
+  },
+  {
+   "text": "NESTEA LIMON 1/3 SR BANDEJA CAJ",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "34,66",
+   "conf": 1.0
+  },
+  {
+   "text": "20,60",
+   "conf": 1.0
+  },
+  {
+   "text": "0,31",
+   "conf": 0.99
+  },
+  {
+   "text": "0,02",
+   "conf": 0.96
+  },
+  {
+   "text": "14,39",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00 81655155",
+   "conf": 0.96
+  },
+  {
+   "text": "24U.P.HT",
+   "conf": 0.99
+  },
+  {
+   "text": "0LM1400",
+   "conf": 0.99
+  },
+  {
+   "text": "JEMAQUIMP DESINCRUSTANTE",
+   "conf": 0.99
+  },
+  {
+   "text": "NN",
+   "conf": 0.53
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "19,10",
+   "conf": 1.0
+  },
+  {
+   "text": "8,50",
+   "conf": 1.0
+  },
+  {
+   "text": "10,60",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 1.0
+  },
+  {
+   "text": "DE CAL LAVJ 6L",
+   "conf": 0.96
+  },
+  {
+   "text": "0LM2515",
+   "conf": 0.99
+  },
+  {
+   "text": "FAIRY LAVAVAJILLAS MANUAL",
+   "conf": 0.99
+  },
+  {
+   "text": "UN",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "24,08",
+   "conf": 1.0
+  },
+  {
+   "text": "12,13",
+   "conf": 1.0
+  },
+  {
+   "text": "11,95",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 1.0
+  },
+  {
+   "text": "DREFT 5L",
+   "conf": 0.95
+  },
+  {
+   "text": "0LM2521",
+   "conf": 0.99
+  },
+  {
+   "text": "MR. PROPER FREGASUELOS",
+   "conf": 0.99
+  },
+  {
+   "text": "UN",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "18,48",
+   "conf": 1.0
+  },
+  {
+   "text": "9,03",
+   "conf": 0.99
+  },
+  {
+   "text": "9,45",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 1.0
+  },
+  {
+   "text": "LIMON 5L",
+   "conf": 1.0
+  },
+  {
+   "text": "0LM1413",
+   "conf": 0.93
+  },
+  {
+   "text": "TEMP NATUREBOBINA SECAM",
+   "conf": 0.99
+  },
+  {
+   "text": "CAJ",
+   "conf": 1.0
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "28,00",
+   "conf": 1.0
+  },
+  {
+   "text": "13,55",
+   "conf": 1.0
+  },
+  {
+   "text": "14,45",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 0.98
+  },
+  {
+   "text": "PASTA 1K BLNC 6U",
+   "conf": 0.97
+  },
+  {
+   "text": "0LM1489",
+   "conf": 1.0
+  },
+  {
+   "text": "BLUE SKIN GUANTES DE NITRILO CAJ",
+   "conf": 0.98
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "5,68",
+   "conf": 1.0
+  },
+  {
+   "text": "5,06",
+   "conf": 1.0
+  },
+  {
+   "text": "6,30",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 1.0
+  },
+  {
+   "text": "GRAND 100U",
+   "conf": 0.96
+  },
+  {
+   "text": "0ZU0020",
+   "conf": 0.96
+  },
+  {
+   "text": "GRANINI MELOCOTON 20CL 24U CAJ",
+   "conf": 1.0
+  },
+  {
+   "text": "30,99",
+   "conf": 1.0
+  },
+  {
+   "text": "10,33",
+   "conf": 1.0
+  },
+  {
+   "text": "20,66",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00 80792433",
+   "conf": 0.96
+  },
+  {
+   "text": "0LI0560",
+   "conf": 1.0
+  },
+  {
+   "text": "APEROL BARBIERI 1L",
+   "conf": 0.95
+  },
+  {
+   "text": "BOT",
+   "conf": 1.0
+  },
+  {
+   "text": "3",
+   "conf": 1.0
+  },
+  {
+   "text": "12,83",
+   "conf": 0.99
+  },
+  {
+   "text": "4,23",
+   "conf": 0.98
+  },
+  {
+   "text": "34,26",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00",
+   "conf": 0.98
+  },
+  {
+   "text": "FTII 5B24",
+   "conf": 0.9
+  },
+  {
+   "text": "FEVERTREE INDIAN TONIC 1/5",
+   "conf": 0.99
+  },
+  {
+   "text": "CAJ",
+   "conf": 1.0
+  },
+  {
+   "text": "33,23",
+   "conf": 0.99
+  },
+  {
+   "text": "33,23",
+   "conf": 1.0
+  },
+  {
+   "text": "0,27",
+   "conf": 0.99
+  },
+  {
+   "text": "0,01",
+   "conf": 0.97
+  },
+  {
+   "text": "0,28",
+   "conf": 1.0
+  },
+  {
+   "text": "21,0081658986",
+   "conf": 1.0
+  },
+  {
+   "text": "BAND-24U.",
+   "conf": 1.0
+  },
+  {
+   "text": "ED30",
+   "conf": 1.0
+  },
+  {
+   "text": "ESTRELLA DAMM BARRIL 30",
+   "conf": 0.99
+  },
+  {
+   "text": "BRL",
+   "conf": 1.0
+  },
+  {
+   "text": "3",
+   "conf": 1.0
+  },
+  {
+   "text": "129,20",
+   "conf": 0.98
+  },
+  {
+   "text": "387,60",
+   "conf": 1.0
+  },
+  {
+   "text": "21,00 81715951",
+   "conf": 0.96
+  },
+  {
+   "text": "lmp.Bruto",
+   "conf": 0.92
+  },
+  {
+   "text": "S.L.",
+   "conf": 0.86
+  },
+  {
+   "text": "Dto.Fact.",
+   "conf": 0.98
+  },
+  {
+   "text": "Base",
+   "conf": 1.0
+  },
+  {
+   "text": "%IVA",
+   "conf": 0.91
+  },
+  {
+   "text": "Imp.IVA",
+   "conf": 0.89
+  },
+  {
+   "text": "%REImp.REC",
+   "conf": 0.95
+  },
+  {
+   "text": "294,54",
+   "conf": 0.99
+  },
+  {
+   "text": "2,69",
+   "conf": 0.98
+  },
+  {
+   "text": "297,23",
+   "conf": 0.91
+  },
+  {
+   "text": "21,00",
+   "conf": 0.99
+  },
+  {
+   "text": "62,42",
+   "conf": 0.98
+  },
+  {
+   "text": "133,94",
+   "conf": 0.98
+  },
+  {
+   "text": "133,94",
+   "conf": 0.98
+  },
+  {
+   "text": "10,00",
+   "conf": 0.91
+  },
+  {
+   "text": "mporte",
+   "conf": 1.0
+  },
+  {
+   "text": "516,33",
+   "conf": 1.0
+  },
+  {
+   "text": "13,39",
+   "conf": 0.99
+  },
+  {
+   "text": "8,99",
+   "conf": 1.0
+  },
+  {
+   "text": "8,99",
+   "conf": 0.98
+  },
+  {
+   "text": "4,00",
+   "conf": 0.99
+  },
+  {
+   "text": "0,36",
+   "conf": 0.99
+  },
+  {
+   "text": "TOTAL",
+   "conf": 1.0
+  },
+  {
+   "text": "516,33.",
+   "conf": 0.95
+  },
+  {
+   "text": "Esta factura se considerarõ pagada s¾lo con su corr",
+   "conf": 0.97
+  }
+ ]
+}

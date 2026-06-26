@@ -1,0 +1,553 @@
+{
+ "doc": "Jasaalbaran2.pdf",
+ "lines": [
+  {
+   "text": "IFS",
+   "conf": 0.96
+  },
+  {
+   "text": "Põgina 1 de 1",
+   "conf": 0.97
+  },
+  {
+   "text": "JOAQUIN AYORA.S.A.U.",
+   "conf": 0.96
+  },
+  {
+   "text": "Pol. Ind. Horno de Alcedo",
+   "conf": 0.94
+  },
+  {
+   "text": "Jasa",
+   "conf": 0.98
+  },
+  {
+   "text": "C/Pi Blanc,9",
+   "conf": 0.95
+  },
+  {
+   "text": "NALBARAN",
+   "conf": 0.98
+  },
+  {
+   "text": "46026 Valencia - (Valencia) - Espana",
+   "conf": 0.97
+  },
+  {
+   "text": "TEL.963961386",
+   "conf": 0.99
+  },
+  {
+   "text": "ALV260303735",
+   "conf": 1.0
+  },
+  {
+   "text": "FAX.963960984",
+   "conf": 1.0
+  },
+  {
+   "text": "Pasi¾n por",
+   "conf": 0.94
+  },
+  {
+   "text": "www.jasaalimentacion.com",
+   "conf": 1.0
+  },
+  {
+   "text": "la Alimentaci¾n",
+   "conf": 0.94
+  },
+  {
+   "text": "FECHA",
+   "conf": 0.99
+  },
+  {
+   "text": "COD.CLIENTE",
+   "conf": 0.96
+  },
+  {
+   "text": "CADENA",
+   "conf": 1.0
+  },
+  {
+   "text": "LA CUBIERTA MAR,S.L.",
+   "conf": 0.93
+  },
+  {
+   "text": "04/03/26",
+   "conf": 1.0
+  },
+  {
+   "text": "CAPILAR",
+   "conf": 1.0
+  },
+  {
+   "text": "LA CUBIERTA MAR",
+   "conf": 0.94
+  },
+  {
+   "text": "31634",
+   "conf": 0.92
+  },
+  {
+   "text": "COD.AGENTE",
+   "conf": 0.99
+  },
+  {
+   "text": "TRANSPORTISTA",
+   "conf": 0.99
+  },
+  {
+   "text": "CAMI CANAL,91",
+   "conf": 0.96
+  },
+  {
+   "text": "46024 Valencia",
+   "conf": 0.97
+  },
+  {
+   "text": "72-ANGEL VIV¾ COLL",
+   "conf": 0.95
+  },
+  {
+   "text": "78 - Pedro Javier LOPEZ",
+   "conf": 0.99
+  },
+  {
+   "text": "Valencia Espana",
+   "conf": 0.96
+  },
+  {
+   "text": "FORMA DE PAGO",
+   "conf": 0.95
+  },
+  {
+   "text": "DOCUMENTO",
+   "conf": 1.0
+  },
+  {
+   "text": "B75717793",
+   "conf": 1.0
+  },
+  {
+   "text": "Tel649433518",
+   "conf": 0.99
+  },
+  {
+   "text": "GIRO - 7 DIAS - 11/03/2026",
+   "conf": 0.96
+  },
+  {
+   "text": "PedPV260303644.Ref://",
+   "conf": 0.96
+  },
+  {
+   "text": "OBSERVACIONES:",
+   "conf": 1.0
+  },
+  {
+   "text": "Fecha y Hora de servicio: 04/03/26. 10:00-14:00.",
+   "conf": 0.99
+  },
+  {
+   "text": "U/UD.",
+   "conf": 0.98
+  },
+  {
+   "text": "oN",
+   "conf": 0.93
+  },
+  {
+   "text": "DESCRIPCI¾N",
+   "conf": 0.93
+  },
+  {
+   "text": "CANTIDAD",
+   "conf": 0.99
+  },
+  {
+   "text": "U.MED.",
+   "conf": 0.97
+  },
+  {
+   "text": "P.V.PDTO",
+   "conf": 0.98
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 1.0
+  },
+  {
+   "text": "MED",
+   "conf": 1.0
+  },
+  {
+   "text": "Refrigerado",
+   "conf": 1.0
+  },
+  {
+   "text": "Cajas:1/Uds:3/Total Kilos:4,730",
+   "conf": 0.96
+  },
+  {
+   "text": "Mercancia perecedera.mantenida a una temperatura  4░C",
+   "conf": 0.96
+  },
+  {
+   "text": "47000040",
+   "conf": 1.0
+  },
+  {
+   "text": "AJOARRIERO C/2-TR 970 g",
+   "conf": 1.0
+  },
+  {
+   "text": "1.",
+   "conf": 0.84
+  },
+  {
+   "text": "CAJA",
+   "conf": 0.99
+  },
+  {
+   "text": "2,00",
+   "conf": 0.99
+  },
+  {
+   "text": "13,200",
+   "conf": 0.95
+  },
+  {
+   "text": "26,40",
+   "conf": 0.91
+  },
+  {
+   "text": "F.C.: 16/05/26. Can: 2. IVA 10 %",
+   "conf": 1.0
+  },
+  {
+   "text": "47001601",
+   "conf": 1.0
+  },
+  {
+   "text": "BACON LONCHEADO C/10-BD 1 kg",
+   "conf": 1.0
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "k",
+   "conf": 0.5
+  },
+  {
+   "text": "1,00",
+   "conf": 0.97
+  },
+  {
+   "text": "6,884",
+   "conf": 0.92
+  },
+  {
+   "text": "13,77",
+   "conf": 0.98
+  },
+  {
+   "text": "F.C.:27/04/26.Can2.Tio D'Oro IVA 10 %",
+   "conf": 0.94
+  },
+  {
+   "text": "09000038",
+   "conf": 1.0
+  },
+  {
+   "text": "JAMON GRAN RESERVA loncheado C/6-BD 500 g",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "U",
+   "conf": 0.73
+  },
+  {
+   "text": "1,00",
+   "conf": 0.96
+  },
+  {
+   "text": "8,250",
+   "conf": 0.99
+  },
+  {
+   "text": "8,25",
+   "conf": 0.93
+  },
+  {
+   "text": "F.C.: 31/10/26. Can: 1. Escamez IVA 10 %",
+   "conf": 1.0
+  },
+  {
+   "text": "Congelado",
+   "conf": 1.0
+  },
+  {
+   "text": "Cajas:6/Kilos:7,69/Total Kilos:20,970",
+   "conf": 0.96
+  },
+  {
+   "text": "Mercancia congelada mantenida a una temperatura  -18░c",
+   "conf": 0.97
+  },
+  {
+   "text": "48000108",
+   "conf": 1.0
+  },
+  {
+   "text": "CALAMAR ANILLA ENHARINADA C/1-CJ 1,5 kg",
+   "conf": 1.0
+  },
+  {
+   "text": "3",
+   "conf": 0.99
+  },
+  {
+   "text": "CAJA",
+   "conf": 1.0
+  },
+  {
+   "text": "1,00",
+   "conf": 0.98
+  },
+  {
+   "text": "16,000",
+   "conf": 0.99
+  },
+  {
+   "text": "48,00",
+   "conf": 0.99
+  },
+  {
+   "text": "F.C.: 17/12/27. Can: 3. IVA 10 %",
+   "conf": 0.98
+  },
+  {
+   "text": "48001899",
+   "conf": 1.0
+  },
+  {
+   "text": "POLLO FINGER AMERICAN CRISPY 40 g C/5-BL 1 kg",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "CAJA",
+   "conf": 1.0
+  },
+  {
+   "text": "5,00",
+   "conf": 0.99
+  },
+  {
+   "text": "10,400",
+   "conf": 0.99
+  },
+  {
+   "text": "52,00",
+   "conf": 0.99
+  },
+  {
+   "text": "F.C.: 31/07/27. Can: 5. 0,416 ú / K - IVA 10 %",
+   "conf": 0.93
+  },
+  {
+   "text": "48001359",
+   "conf": 1.0
+  },
+  {
+   "text": "TORTITA CAMARON 24 u C/3-EST 1 kg",
+   "conf": 1.0
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "CAJA",
+   "conf": 1.0
+  },
+  {
+   "text": "3,00",
+   "conf": 0.99
+  },
+  {
+   "text": "8,250",
+   "conf": 0.95
+  },
+  {
+   "text": "24,75",
+   "conf": 0.91
+  },
+  {
+   "text": "F.C.: 17/06/27. Can: 3. 0,347 Ç / K - IVA 10 %",
+   "conf": 0.93
+  },
+  {
+   "text": "47000221",
+   "conf": 1.0
+  },
+  {
+   "text": "CERDO SOLOMILLO C/****kg",
+   "conf": 0.96
+  },
+  {
+   "text": "7.69",
+   "conf": 0.92
+  },
+  {
+   "text": "K",
+   "conf": 0.96
+  },
+  {
+   "text": "5,667",
+   "conf": 0.96
+  },
+  {
+   "text": "43,58",
+   "conf": 0.93
+  },
+  {
+   "text": "F.C.: 26/01/28. Can: 7.69.",
+   "conf": 0.99
+  },
+  {
+   "text": "Peso: 7,690. Total: 7,690 IVA 10 %",
+   "conf": 0.99
+  },
+  {
+   "text": "BASE IMPONIBLE",
+   "conf": 0.98
+  },
+  {
+   "text": "%1.V.A",
+   "conf": 0.93
+  },
+  {
+   "text": "CUOTAI.V.A",
+   "conf": 0.97
+  },
+  {
+   "text": "%REQ.EQUIV.",
+   "conf": 0.95
+  },
+  {
+   "text": "CUOTAR.E.Q",
+   "conf": 0.98
+  },
+  {
+   "text": "B.l.",
+   "conf": 0.85
+  },
+  {
+   "text": "216,75",
+   "conf": 0.99
+  },
+  {
+   "text": "216,75",
+   "conf": 0.98
+  },
+  {
+   "text": "10",
+   "conf": 1.0
+  },
+  {
+   "text": "21,68",
+   "conf": 1.0
+  },
+  {
+   "text": "INCOTERM:",
+   "conf": 1.0
+  },
+  {
+   "text": "ENF",
+   "conf": 1.0
+  },
+  {
+   "text": "NCAJAS",
+   "conf": 0.97
+  },
+  {
+   "text": "7",
+   "conf": 0.99
+  },
+  {
+   "text": "TOTAL KGS.",
+   "conf": 0.95
+  },
+  {
+   "text": "25,700",
+   "conf": 0.97
+  },
+  {
+   "text": "TOTAL IMPORTE",
+   "conf": 0.95
+  },
+  {
+   "text": "238.436",
+   "conf": 0.94
+  },
+  {
+   "text": "- LA CUBIERTA MAR, S.L.",
+   "conf": 0.96
+  },
+  {
+   "text": "RECIBI:",
+   "conf": 0.97
+  },
+  {
+   "text": "CAMI CANAL,91",
+   "conf": 0.96
+  },
+  {
+   "text": "46024 Valencia",
+   "conf": 0.97
+  },
+  {
+   "text": "ayuda",
+   "conf": 1.0
+  },
+  {
+   "text": "Valencia",
+   "conf": 1.0
+  },
+  {
+   "text": "en tu reparto",
+   "conf": 0.97
+  },
+  {
+   "text": "Espana",
+   "conf": 0.92
+  },
+  {
+   "text": "617004354 9-17h",
+   "conf": 0.98
+  },
+  {
+   "text": "16",
+   "conf": 1.0
+  },
+  {
+   "text": "Comprometidos",
+   "conf": 0.99
+  },
+  {
+   "text": "Sostenibifidad",
+   "conf": 0.94
+  }
+ ]
+}

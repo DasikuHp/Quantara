@@ -1,0 +1,181 @@
+{
+ "doc": "Lassalalbaran.pdf",
+ "lines": [
+  {
+   "text": "lassal",
+   "conf": 0.98
+  },
+  {
+   "text": "Delivery Note AL26001919",
+   "conf": 0.97
+  },
+  {
+   "text": "03/03/2026",
+   "conf": 1.0
+  },
+  {
+   "text": "Shipping Address",
+   "conf": 1.0
+  },
+  {
+   "text": "Customer",
+   "conf": 1.0
+  },
+  {
+   "text": "LA CUBIERTA MAR S.L",
+   "conf": 0.94
+  },
+  {
+   "text": "C000401-LA CUBIERTA MAR S.L",
+   "conf": 0.93
+  },
+  {
+   "text": "Tel.)",
+   "conf": 0.89
+  },
+  {
+   "text": "VAT No.:B75717793",
+   "conf": 0.93
+  },
+  {
+   "text": "CAMi CANAL,91,POBLADOS MARITIMOS",
+   "conf": 0.93
+  },
+  {
+   "text": "46024 VALENCIA,Valencia(Espana)",
+   "conf": 0.92
+  },
+  {
+   "text": "Shipment Method:",
+   "conf": 0.94
+  },
+  {
+   "text": "N░",
+   "conf": 0.69
+  },
+  {
+   "text": "Description",
+   "conf": 0.99
+  },
+  {
+   "text": "Quantity",
+   "conf": 1.0
+  },
+  {
+   "text": "PT-02.005",
+   "conf": 1.0
+  },
+  {
+   "text": "Arroz a banda Horeca 2 raciones x 6 unds",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 0.88
+  },
+  {
+   "text": "Caja",
+   "conf": 1.0
+  },
+  {
+   "text": "LOT: 047H (1) 27/04/2026",
+   "conf": 1.0
+  },
+  {
+   "text": "PT-02.004",
+   "conf": 1.0
+  },
+  {
+   "text": "Paella Valenciana Horeca 2 raciones x 6 unds",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "Caja",
+   "conf": 1.0
+  },
+  {
+   "text": "LOT: 021H (1) 21/04/2026",
+   "conf": 0.99
+  },
+  {
+   "text": "PT-02.006",
+   "conf": 1.0
+  },
+  {
+   "text": "Arroz Negro Horeca 2 raciones x 6 unds",
+   "conf": 0.99
+  },
+  {
+   "text": "Caja",
+   "conf": 1.0
+  },
+  {
+   "text": "LOT: 027H (1) 07/04/2026",
+   "conf": 1.0
+  },
+  {
+   "text": "1ib",
+   "conf": 0.63
+  },
+  {
+   "text": "Estado Transnorte",
+   "conf": 0.96
+  },
+  {
+   "text": "Etiauetado",
+   "conf": 0.93
+  },
+  {
+   "text": "Ausencia olores",
+   "conf": 0.95
+  },
+  {
+   "text": "Albaran",
+   "conf": 0.92
+  },
+  {
+   "text": "Compatibilidad productos",
+   "conf": 0.97
+  },
+  {
+   "text": "Responsable",
+   "conf": 0.99
+  },
+  {
+   "text": "Observaciones:",
+   "conf": 0.95
+  },
+  {
+   "text": "Shipping Agent:",
+   "conf": 0.94
+  },
+  {
+   "text": "Signature Confirmation Receipt",
+   "conf": 0.99
+  },
+  {
+   "text": "Comments",
+   "conf": 1.0
+  },
+  {
+   "text": "'Name:",
+   "conf": 0.9
+  },
+  {
+   "text": "VAT No.:",
+   "conf": 0.85
+  },
+  {
+   "text": "C/ISLAS BALEARES 12 P.I. FUENTE DEL JARRO, 46988 PATERNA. Tel. 961369620. e-mail:administracion@lassal.es www.lassal.es",
+   "conf": 0.97
+  },
+  {
+   "text": "Tomo.11081,F-191,V-201398 inscripci¾n 1a",
+   "conf": 0.91
+  }
+ ]
+}

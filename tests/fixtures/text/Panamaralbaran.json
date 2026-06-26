@@ -1,0 +1,413 @@
+{
+ "doc": "Panamaralbaran.pdf",
+ "lines": [
+  {
+   "text": "Panamar",
+   "conf": 1.0
+  },
+  {
+   "text": "PANAMAR BAKERY GROUP S.L.",
+   "conf": 0.98
+  },
+  {
+   "text": "C/LA NORIA 3 P.I. DEL MEDITERRANEO",
+   "conf": 0.97
+  },
+  {
+   "text": "CLIENTE",
+   "conf": 0.99
+  },
+  {
+   "text": "BAKERY_GROUP.",
+   "conf": 0.96
+  },
+  {
+   "text": "VALENCIA",
+   "conf": 1.0
+  },
+  {
+   "text": "112898",
+   "conf": 1.0
+  },
+  {
+   "text": "46550-ALBUIXECH",
+   "conf": 0.97
+  },
+  {
+   "text": "LA CUBIERTA MAR, S.L",
+   "conf": 0.95
+  },
+  {
+   "text": "C.I.F.: ESB82409772",
+   "conf": 0.99
+  },
+  {
+   "text": "CAMINO CANAL, 91",
+   "conf": 0.99
+  },
+  {
+   "text": "TEL+34961 401218",
+   "conf": 0.97
+  },
+  {
+   "text": "46024 - VALENCIA",
+   "conf": 0.98
+  },
+  {
+   "text": "FAX:+34961402260",
+   "conf": 0.97
+  },
+  {
+   "text": "VALENCIA",
+   "conf": 1.0
+  },
+  {
+   "text": "C.I.F.: B75717793",
+   "conf": 0.99
+  },
+  {
+   "text": "TEL: +34 608 785 974",
+   "conf": 1.0
+  },
+  {
+   "text": "FAX:",
+   "conf": 0.9
+  },
+  {
+   "text": "TIPO DE DOCUMENTO",
+   "conf": 0.96
+  },
+  {
+   "text": "NUESTROS DATOS",
+   "conf": 0.98
+  },
+  {
+   "text": "ALBARANF.ALBARANF.ENTREGATRANSP.PORTES",
+   "conf": 0.99
+  },
+  {
+   "text": "DIRECCION ENVIO MERCANCIA",
+   "conf": 0.97
+  },
+  {
+   "text": "ALBARAN",
+   "conf": 1.0
+  },
+  {
+   "text": "800406519903/03/2026",
+   "conf": 1.0
+  },
+  {
+   "text": "03/03/2026",
+   "conf": 1.0
+  },
+  {
+   "text": "398320",
+   "conf": 1.0
+  },
+  {
+   "text": "112898",
+   "conf": 1.0
+  },
+  {
+   "text": "MUELLE",
+   "conf": 0.99
+  },
+  {
+   "text": "DAP",
+   "conf": 1.0
+  },
+  {
+   "text": "LA CUBIERTA BEATS & BITES",
+   "conf": 0.96
+  },
+  {
+   "text": "H.ENTREGA",
+   "conf": 0.99
+  },
+  {
+   "text": "ALMACEN",
+   "conf": 1.0
+  },
+  {
+   "text": "CAMINO CANAL, 91",
+   "conf": 0.96
+  },
+  {
+   "text": "PAGINA",
+   "conf": 1.0
+  },
+  {
+   "text": "0:00:00",
+   "conf": 0.98
+  },
+  {
+   "text": "46024-VALENCIA",
+   "conf": 0.99
+  },
+  {
+   "text": "1071",
+   "conf": 1.0
+  },
+  {
+   "text": "AGENTE",
+   "conf": 1.0
+  },
+  {
+   "text": "TORRES PACO JUAN GABRIEL",
+   "conf": 0.96
+  },
+  {
+   "text": "Valencia",
+   "conf": 1.0
+  },
+  {
+   "text": "1/1",
+   "conf": 1.0
+  },
+  {
+   "text": "REPARTIDORCABALLERO MUELAS, CARLOS",
+   "conf": 0.97
+  },
+  {
+   "text": "C.I.F.: B75717793",
+   "conf": 0.97
+  },
+  {
+   "text": "TEL: +34 608 785 974",
+   "conf": 1.0
+  },
+  {
+   "text": "FAX:",
+   "conf": 0.98
+  },
+  {
+   "text": "CONDICIONES DE ENTREGA",
+   "conf": 0.98
+  },
+  {
+   "text": "PEDIDO:",
+   "conf": 0.99
+  },
+  {
+   "text": "8877987",
+   "conf": 1.0
+  },
+  {
+   "text": "FECHA PEDIDO:",
+   "conf": 0.94
+  },
+  {
+   "text": "CODIGO",
+   "conf": 0.99
+  },
+  {
+   "text": "02/03/2026",
+   "conf": 1.0
+  },
+  {
+   "text": "CODIGO EAN-13",
+   "conf": 0.96
+  },
+  {
+   "text": "REF.PEDIDO:",
+   "conf": 0.93
+  },
+  {
+   "text": "CANT. FACT.",
+   "conf": 0.96
+  },
+  {
+   "text": "DESCRIPCION",
+   "conf": 0.99
+  },
+  {
+   "text": "130945",
+   "conf": 1.0
+  },
+  {
+   "text": "U.F.",
+   "conf": 0.99
+  },
+  {
+   "text": "8425514009394",
+   "conf": 1.0
+  },
+  {
+   "text": "BULTOS",
+   "conf": 0.99
+  },
+  {
+   "text": "U.M.",
+   "conf": 0.99
+  },
+  {
+   "text": "LOTE",
+   "conf": 1.0
+  },
+  {
+   "text": "MAXI BURGER BRIOCHE DYL 85G",
+   "conf": 0.99
+  },
+  {
+   "text": "F.CAD.",
+   "conf": 0.99
+  },
+  {
+   "text": "CANT.",
+   "conf": 0.99
+  },
+  {
+   "text": "LOTE",
+   "conf": 0.99
+  },
+  {
+   "text": "F.CAD.",
+   "conf": 0.99
+  },
+  {
+   "text": "45",
+   "conf": 1.0
+  },
+  {
+   "text": "UN",
+   "conf": 0.99
+  },
+  {
+   "text": "CANT.",
+   "conf": 0.99
+  },
+  {
+   "text": "231",
+   "conf": 1.0
+  },
+  {
+   "text": "8436014307477",
+   "conf": 1.0
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "CAJ",
+   "conf": 0.99
+  },
+  {
+   "text": "RIQUINO BOCATA EXPRESS 140G",
+   "conf": 0.98
+  },
+  {
+   "text": "45",
+   "conf": 1.0
+  },
+  {
+   "text": "UN",
+   "conf": 0.99
+  },
+  {
+   "text": "CAJ",
+   "conf": 1.0
+  },
+  {
+   "text": "TOTAL CAJAS:",
+   "conf": 1.0
+  },
+  {
+   "text": "TOTAL HUECOS:",
+   "conf": 1.0
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "TOTAL KILOS:",
+   "conf": 1.0
+  },
+  {
+   "text": "0,057",
+   "conf": 1.0
+  },
+  {
+   "text": "11,08",
+   "conf": 1.0
+  },
+  {
+   "text": "DATOS DE LA RECEPCION DEL CLIENTE",
+   "conf": 0.96
+  },
+  {
+   "text": "DATOS DE LA CARGA",
+   "conf": 0.95
+  },
+  {
+   "text": "AGENCIA: CARLOS CABALLERO",
+   "conf": 0.98
+  },
+  {
+   "text": "FECHA DE RECEPCION:",
+   "conf": 0.96
+  },
+  {
+   "text": "C.I.F.:",
+   "conf": 0.94
+  },
+  {
+   "text": "FIRMA Y SELLO DEL",
+   "conf": 0.97
+  },
+  {
+   "text": "TELEFONO:",
+   "conf": 0.99
+  },
+  {
+   "text": "INDIQUE INCIDENCIAS Y RECHAZOS A",
+   "conf": 0.98
+  },
+  {
+   "text": "CLIENTE:",
+   "conf": 0.98
+  },
+  {
+   "text": "CONTINUACION. SOLO SE ADMITEN",
+   "conf": 0.97
+  },
+  {
+   "text": "CONDUCTOR:",
+   "conf": 1.0
+  },
+  {
+   "text": "RECLAMACIONES CON LA FIRMA Y SELLO DEL",
+   "conf": 1.0
+  },
+  {
+   "text": "C.I.F.:",
+   "conf": 0.94
+  },
+  {
+   "text": "CLIENTE",
+   "conf": 0.97
+  },
+  {
+   "text": "MOVIL:",
+   "conf": 0.99
+  },
+  {
+   "text": "CODIGO",
+   "conf": 1.0
+  },
+  {
+   "text": "CANTIDAD",
+   "conf": 0.99
+  },
+  {
+   "text": "PRODUCTOPRODUCTO",
+   "conf": 0.99
+  },
+  {
+   "text": "COMENTARIO",
+   "conf": 1.0
+  }
+ ]
+}

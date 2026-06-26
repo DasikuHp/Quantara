@@ -1,0 +1,1017 @@
+{
+ "doc": "nemakroAlbara.pdf",
+ "lines": [
+  {
+   "text": "makro",
+   "conf": 0.99
+  },
+  {
+   "text": "Pagina:1",
+   "conf": 0.85
+  },
+  {
+   "text": "Makro Distribucion Mayorista, S.A.",
+   "conf": 0.98
+  },
+  {
+   "text": "MAKRO VALENCIA-2",
+   "conf": 0.98
+  },
+  {
+   "text": "Fecha de venta:",
+   "conf": 0.99
+  },
+  {
+   "text": "26/02/202609:45",
+   "conf": 0.98
+  },
+  {
+   "text": "C/ PEDRAPIQUERS,14",
+   "conf": 0.98
+  },
+  {
+   "text": "PASEO IMPERIAL 40",
+   "conf": 0.94
+  },
+  {
+   "text": "Fecha impresi¾n:",
+   "conf": 0.99
+  },
+  {
+   "text": "26/02/202609:47",
+   "conf": 0.98
+  },
+  {
+   "text": "28005MADRID",
+   "conf": 0.99
+  },
+  {
+   "text": "POL. IND. VARA DE QUART",
+   "conf": 0.97
+  },
+  {
+   "text": "Fecha de entrega:",
+   "conf": 1.0
+  },
+  {
+   "text": "26/02/202609:47",
+   "conf": 0.99
+  },
+  {
+   "text": "46014 VALENCIA",
+   "conf": 0.99
+  },
+  {
+   "text": "Telf.: 963134950 Fax: 963798550",
+   "conf": 0.99
+  },
+  {
+   "text": "IFA-28/647451",
+   "conf": 0.98
+  },
+  {
+   "text": "Reg. Merc. de Madrid, T. 3.669, L. 0. F. 86 Secc. 8.a H. M-61.688",
+   "conf": 0.98
+  },
+  {
+   "text": "017/189",
+   "conf": 1.0
+  },
+  {
+   "text": "3235",
+   "conf": 1.0
+  },
+  {
+   "text": "0/0(017)0207/(2026)005540",
+   "conf": 0.97
+  },
+  {
+   "text": "(207-0055400)",
+   "conf": 0.97
+  },
+  {
+   "text": "Factura:",
+   "conf": 0.98
+  },
+  {
+   "text": "N.cliente: 17 755692 1 1 SC",
+   "conf": 0.97
+  },
+  {
+   "text": "LECUBIERTA MAR",
+   "conf": 0.93
+  },
+  {
+   "text": "N.I.F.: B75717793",
+   "conf": 0.98
+  },
+  {
+   "text": "Cani Canal 91 BAJO",
+   "conf": 0.89
+  },
+  {
+   "text": "555",
+   "conf": 1.0
+  },
+  {
+   "text": "ESP46024VALENCIA",
+   "conf": 0.98
+  },
+  {
+   "text": "Cont Prec. Ud.",
+   "conf": 0.98
+  },
+  {
+   "text": "Cont P.",
+   "conf": 1.0
+  },
+  {
+   "text": "Precio",
+   "conf": 1.0
+  },
+  {
+   "text": "Cant.",
+   "conf": 1.0
+  },
+  {
+   "text": "Importe",
+   "conf": 1.0
+  },
+  {
+   "text": "Imp",
+   "conf": 1.0
+  },
+  {
+   "text": "Prec.Ud.*",
+   "conf": 0.98
+  },
+  {
+   "text": "DT",
+   "conf": 0.99
+  },
+  {
+   "text": "AOORCD",
+   "conf": 0.97
+  },
+  {
+   "text": "Num.articulo",
+   "conf": 0.9
+  },
+  {
+   "text": "Descrip. articulo",
+   "conf": 0.98
+  },
+  {
+   "text": "3,350",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "3,35",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "3,35",
+   "conf": 0.98
+  },
+  {
+   "text": "5",
+   "conf": 1.0
+  },
+  {
+   "text": "@410603120135",
+   "conf": 0.95
+  },
+  {
+   "text": "HVO SUELO M 1DOC DAGU",
+   "conf": 0.93
+  },
+  {
+   "text": "PK",
+   "conf": 0.99
+  },
+  {
+   "text": "66'Ç",
+   "conf": 0.62
+  },
+  {
+   "text": "3,990",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "3,99",
+   "conf": 0.98
+  },
+  {
+   "text": "5",
+   "conf": 1.0
+  },
+  {
+   "text": "@410603120326",
+   "conf": 0.99
+  },
+  {
+   "text": "HVO SUELO L 1DOC DAGU",
+   "conf": 0.93
+  },
+  {
+   "text": "PK",
+   "conf": 1.0
+  },
+  {
+   "text": "9,250",
+   "conf": 0.97
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "9,25",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "9,25",
+   "conf": 0.96
+  },
+  {
+   "text": "5",
+   "conf": 1.0
+  },
+  {
+   "text": "@422241811649",
+   "conf": 0.94
+  },
+  {
+   "text": "BURRATA 125GX5 LAFUENTE",
+   "conf": 0.95
+  },
+  {
+   "text": "TA",
+   "conf": 1.0
+  },
+  {
+   "text": "CJ",
+   "conf": 0.91
+  },
+  {
+   "text": "20,690",
+   "conf": 0.97
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "20,69",
+   "conf": 0.99
+  },
+  {
+   "text": "20,69",
+   "conf": 0.97
+  },
+  {
+   "text": "8426370800002",
+   "conf": 0.94
+  },
+  {
+   "text": "TRUFAS FROSTENA 50 UD 750GR",
+   "conf": 0.89
+  },
+  {
+   "text": "1",
+   "conf": 0.53
+  },
+  {
+   "text": "KG",
+   "conf": 0.96
+  },
+  {
+   "text": "5,250",
+   "conf": 0.97
+  },
+  {
+   "text": "2,240",
+   "conf": 0.97
+  },
+  {
+   "text": "11,76",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "11,76",
+   "conf": 0.97
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "98412406053965",
+   "conf": 0.98
+  },
+  {
+   "text": "POLLOCORRAL1,7-2KGBL1UD CO",
+   "conf": 0.89
+  },
+  {
+   "text": "CGTIN98412406053965Lote60520151",
+   "conf": 0.93
+  },
+  {
+   "text": "Fecha cadocidad260228",
+   "conf": 0.89
+  },
+  {
+   "text": "CJ",
+   "conf": 0.73
+  },
+  {
+   "text": "8,550",
+   "conf": 0.9
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "8,55",
+   "conf": 0.88
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "17,10",
+   "conf": 0.99
+  },
+  {
+   "text": "5",
+   "conf": 1.0
+  },
+  {
+   "text": "62989",
+   "conf": 0.92
+  },
+  {
+   "text": "/OAS/PPT1.5",
+   "conf": 0.81
+  },
+  {
+   "text": "KIG",
+   "conf": 0.51
+  },
+  {
+   "text": "6,350",
+   "conf": 0.94
+  },
+  {
+   "text": "1,279",
+   "conf": 0.95
+  },
+  {
+   "text": "8,12",
+   "conf": 0.96
+  },
+  {
+   "text": "1",
+   "conf": 0.97
+  },
+  {
+   "text": "8,12",
+   "conf": 0.93
+  },
+  {
+   "text": "5",
+   "conf": 0.99
+  },
+  {
+   "text": "2280501012797",
+   "conf": 0.91
+  },
+  {
+   "text": "MCB",
+   "conf": 0.57
+  },
+  {
+   "text": "2,900",
+   "conf": 0.96
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "2,90",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 0.7
+  },
+  {
+   "text": "2,90",
+   "conf": 0.95
+  },
+  {
+   "text": "5",
+   "conf": 1.0
+  },
+  {
+   "text": "8414892353328",
+   "conf": 0.82
+  },
+  {
+   "text": "O125G",
+   "conf": 0.75
+  },
+  {
+   "text": "5,450",
+   "conf": 0.97
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "5,45",
+   "conf": 0.94
+  },
+  {
+   "text": "2",
+   "conf": 0.99
+  },
+  {
+   "text": "10,90",
+   "conf": 0.92
+  },
+  {
+   "text": "4337182294863",
+   "conf": 0.8
+  },
+  {
+   "text": "95",
+   "conf": 0.67
+  },
+  {
+   "text": "L",
+   "conf": 0.75
+  },
+  {
+   "text": "3,910",
+   "conf": 0.91
+  },
+  {
+   "text": "3,91",
+   "conf": 0.93
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "7,82",
+   "conf": 0.93
+  },
+  {
+   "text": "1",
+   "conf": 0.92
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "0414892303315",
+   "conf": 0.82
+  },
+  {
+   "text": "T..MLT.600",
+   "conf": 0.71
+  },
+  {
+   "text": "BL",
+   "conf": 0.58
+  },
+  {
+   "text": "1,79",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "1,79",
+   "conf": 0.93
+  },
+  {
+   "text": "2",
+   "conf": 0.81
+  },
+  {
+   "text": "8414892785716",
+   "conf": 0.9
+  },
+  {
+   "text": "SF5",
+   "conf": 0.64
+  },
+  {
+   "text": "1,790",
+   "conf": 0.93
+  },
+  {
+   "text": "1",
+   "conf": 0.92
+  },
+  {
+   "text": "9.950",
+   "conf": 0.88
+  },
+  {
+   "text": "1",
+   "conf": 0.98
+  },
+  {
+   "text": "9,95",
+   "conf": 0.94
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "9,95",
+   "conf": 0.92
+  },
+  {
+   "text": "SALMDO CUEO570GR",
+   "conf": 0.73
+  },
+  {
+   "text": "UD",
+   "conf": 0.72
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "5011428000409",
+   "conf": 0.93
+  },
+  {
+   "text": "GE",
+   "conf": 0.94
+  },
+  {
+   "text": "6,750",
+   "conf": 0.92
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "6,75",
+   "conf": 0.94
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "6,75",
+   "conf": 0.97
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "8414892303064",
+   "conf": 0.97
+  },
+  {
+   "text": "ALIOLIARO1,85L",
+   "conf": 0.8
+  },
+  {
+   "text": "PQ",
+   "conf": 0.92
+  },
+  {
+   "text": "3,25",
+   "conf": 0.97
+  },
+  {
+   "text": "3,25",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 0.73
+  },
+  {
+   "text": "7622202214530",
+   "conf": 1.0
+  },
+  {
+   "text": "GALLETA M FONTANEDA 707G",
+   "conf": 0.93
+  },
+  {
+   "text": "3,250",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 0.87
+  },
+  {
+   "text": "PQ",
+   "conf": 0.98
+  },
+  {
+   "text": "1,950",
+   "conf": 0.99
+  },
+  {
+   "text": "1,95",
+   "conf": 0.98
+  },
+  {
+   "text": "4",
+   "conf": 1.0
+  },
+  {
+   "text": "7,80",
+   "conf": 0.97
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "8414892817196",
+   "conf": 1.0
+  },
+  {
+   "text": "SERV MPRO 20X20CM AZUL 150UD",
+   "conf": 0.95
+  },
+  {
+   "text": "13,950",
+   "conf": 0.99
+  },
+  {
+   "text": "13,95",
+   "conf": 0.99
+  },
+  {
+   "text": "27,90",
+   "conf": 0.98
+  },
+  {
+   "text": "12,550 131_1",
+   "conf": 0.93
+  },
+  {
+   "text": "8414892359313",
+   "conf": 1.0
+  },
+  {
+   "text": "VASO CHATC MPRO TRANS 12CL100U",
+   "conf": 0.95
+  },
+  {
+   "text": "RT",
+   "conf": 0.99
+  },
+  {
+   "text": "3,95",
+   "conf": 0.98
+  },
+  {
+   "text": "3,95",
+   "conf": 0.93
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "4337182372936",
+   "conf": 1.0
+  },
+  {
+   "text": "GUANTES NITRILO AZUL MEDIANA",
+   "conf": 0.97
+  },
+  {
+   "text": "CJ",
+   "conf": 0.87
+  },
+  {
+   "text": "3,950",
+   "conf": 0.98
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "CUCHARA-TENE MAD BI0 16CM 100U",
+   "conf": 0.92
+  },
+  {
+   "text": "PQ",
+   "conf": 0.97
+  },
+  {
+   "text": "5,650",
+   "conf": 0.96
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "5,65",
+   "conf": 0.96
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "11,30",
+   "conf": 0.99
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "4002911881262",
+   "conf": 1.0
+  },
+  {
+   "text": "RT",
+   "conf": 0.67
+  },
+  {
+   "text": "3,490",
+   "conf": 0.94
+  },
+  {
+   "text": "1",
+   "conf": 0.96
+  },
+  {
+   "text": "3,49",
+   "conf": 0.95
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "3,49",
+   "conf": 0.95
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "8414892817035",
+   "conf": 0.94
+  },
+  {
+   "text": "BETABAB25CMHPO100",
+   "conf": 0.73
+  },
+  {
+   "text": "SC/5AS32CH50D",
+   "conf": 0.7
+  },
+  {
+   "text": "2,450",
+   "conf": 0.88
+  },
+  {
+   "text": "2,45",
+   "conf": 0.97
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "4,90",
+   "conf": 0.97
+  },
+  {
+   "text": "2",
+   "conf": 1.0
+  },
+  {
+   "text": "8430065011128",
+   "conf": 0.67
+  },
+  {
+   "text": "OI",
+   "conf": 0.52
+  },
+  {
+   "text": "2.250",
+   "conf": 0.7
+  },
+  {
+   "text": "1",
+   "conf": 0.82
+  },
+  {
+   "text": "1.15",
+   "conf": 0.86
+  },
+  {
+   "text": "1,15",
+   "conf": 0.93
+  },
+  {
+   "text": "2",
+   "conf": 0.9
+  },
+  {
+   "text": "2.80-",
+   "conf": 0.74
+  },
+  {
+   "text": "131_1",
+   "conf": 0.92
+  },
+  {
+   "text": "2",
+   "conf": 0.99
+  },
+  {
+   "text": "25.3",
+   "conf": 0.59
+  },
+  {
+   "text": "TotalTwF",
+   "conf": 0.63
+  },
+  {
+   "text": "12.90",
+   "conf": 0.57
+  },
+  {
+   "text": "1=10.008",
+   "conf": 0.69
+  },
+  {
+   "text": "7.29",
+   "conf": 0.78
+  },
+  {
+   "text": "57.",
+   "conf": 0.69
+  },
+  {
+   "text": "2=21,00",
+   "conf": 0.83
+  },
+  {
+   "text": "12,11",
+   "conf": 0.93
+  },
+  {
+   "text": "44.71",
+   "conf": 0.81
+  },
+  {
+   "text": "5=4.00",
+   "conf": 0.87
+  },
+  {
+   "text": "1.79",
+   "conf": 0.95
+  },
+  {
+   "text": "175,31",
+   "conf": 0.89
+  },
+  {
+   "text": "21,19",
+   "conf": 0.97
+  },
+  {
+   "text": "Totalapaga",
+   "conf": 0.93
+  },
+  {
+   "text": "196,50",
+   "conf": 0.99
+  },
+  {
+   "text": "Tarjeta",
+   "conf": 1.0
+  },
+  {
+   "text": "196,50",
+   "conf": 0.99
+  },
+  {
+   "text": "473675",
+   "conf": 0.7
+  },
+  {
+   "text": "Valor total descuentos",
+   "conf": 0.96
+  },
+  {
+   "text": "3,39-",
+   "conf": 0.96
+  },
+  {
+   "text": "Elclientetieeplaooece",
+   "conf": 0.78
+  },
+  {
+   "text": "que el articulo este sin usar y con todos sus accesorios y que venga con su embalaje original en perfecto estado. En caso de articul de",
+   "conf": 0.96
+  },
+  {
+   "text": "confeccion ceberan venir con la etiqueta de producto. En los productos tecnologicos, las devoluciones se tramitarõn a traves de los",
+   "conf": 0.97
+  },
+  {
+   "text": "servicios tÚcnicos oficiales para la comprobacion del uso del articylo siendo ios procedimientos establecidos al efecto. No se admiten",
+   "conf": 0.98
+  },
+  {
+   "text": "informaticos,",
+   "conf": 0.97
+  },
+  {
+   "text": "articulos de alimentacion y bebidas, drogueria, combustibles, ni",
+   "conf": 0.99
+  },
+  {
+   "text": "devoluciones de libros,",
+   "conf": 0.97
+  },
+  {
+   "text": "articulos de venta por encargo o fuera del surtido.n*Sin perjuicio de los derechos de garantia reconocidos en la ley.nEn el precio de",
+   "conf": 0.99
+  },
+  {
+   "text": "los aparatos electricos/electonicos estõ repercutido el coste de gesti6n medioambiental seg³n R.D. 208/2005nEn cumplimiento de los",
+   "conf": 0.98
+  },
+  {
+   "text": "requisitos establecidos en el Reglamento REACH, tienen a su disposici¾n la informacion y datos de seguridad de los productos quimicos",
+   "conf": 0.99
+  },
+  {
+   "text": "en: www.makro.es/FDS",
+   "conf": 0.99
+  },
+  {
+   "text": "* Precio unitario aplicado descuento correspondiente. Caracter informativo.",
+   "conf": 0.99
+  },
+  {
+   "text": "* Fin de factura",
+   "conf": 0.94
+  }
+ ]
+}

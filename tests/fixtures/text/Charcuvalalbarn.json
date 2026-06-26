@@ -1,0 +1,281 @@
+{
+ "doc": "Charcuvalalbarn.pdf",
+ "lines": [
+  {
+   "text": "Exclusivas Charcuval, SL",
+   "conf": 0.96
+  },
+  {
+   "text": "ALBARAN",
+   "conf": 1.0
+  },
+  {
+   "text": "Põgina 1 de 1",
+   "conf": 0.87
+  },
+  {
+   "text": "C.I.F.B98716228",
+   "conf": 0.99
+  },
+  {
+   "text": "NUM.26A/2108",
+   "conf": 0.99
+  },
+  {
+   "text": "Motor S. Agustin, 5-7 46470 Massanassa",
+   "conf": 1.0
+  },
+  {
+   "text": "FECHA 11/02/26",
+   "conf": 0.97
+  },
+  {
+   "text": "Tels.961252875",
+   "conf": 0.98
+  },
+  {
+   "text": "6009",
+   "conf": 1.0
+  },
+  {
+   "text": "CHARCUVAL",
+   "conf": 0.99
+  },
+  {
+   "text": "B75717793",
+   "conf": 0.99
+  },
+  {
+   "text": "LA CUBIERTA MAR, S.L.",
+   "conf": 0.98
+  },
+  {
+   "text": "Su contacto es:49 SANDRA LOPEZ",
+   "conf": 0.96
+  },
+  {
+   "text": "617393397",
+   "conf": 1.0
+  },
+  {
+   "text": "LA CUBIERTAMAR",
+   "conf": 0.97
+  },
+  {
+   "text": "INV:MA(10:00--14:00:TA(16:00-20:00",
+   "conf": 0.92
+  },
+  {
+   "text": "CAMINO CANAL 91",
+   "conf": 0.98
+  },
+  {
+   "text": "6009",
+   "conf": 1.0
+  },
+  {
+   "text": "46024 VALENCIA",
+   "conf": 0.96
+  },
+  {
+   "text": "VALENCIA",
+   "conf": 0.99
+  },
+  {
+   "text": "Envio:CAMINO CANAL 91",
+   "conf": 0.94
+  },
+  {
+   "text": "Repartidor: TONI",
+   "conf": 0.98
+  },
+  {
+   "text": "3",
+   "conf": 1.0
+  },
+  {
+   "text": "VALENCIA",
+   "conf": 1.0
+  },
+  {
+   "text": "608785974",
+   "conf": 1.0
+  },
+  {
+   "text": "Ref.",
+   "conf": 0.99
+  },
+  {
+   "text": "Lote",
+   "conf": 1.0
+  },
+  {
+   "text": "C/P",
+   "conf": 0.99
+  },
+  {
+   "text": "Descripci¾n",
+   "conf": 0.98
+  },
+  {
+   "text": "Unid.",
+   "conf": 0.99
+  },
+  {
+   "text": "kilos",
+   "conf": 1.0
+  },
+  {
+   "text": "Precio",
+   "conf": 0.99
+  },
+  {
+   "text": "Importe",
+   "conf": 1.0
+  },
+  {
+   "text": "2680620260204",
+   "conf": 0.98
+  },
+  {
+   "text": "1cENSALADILLA RUSA 2kg.GRATAE",
+   "conf": 0.91
+  },
+  {
+   "text": "4.000",
+   "conf": 1.0
+  },
+  {
+   "text": "81'6",
+   "conf": 0.83
+  },
+  {
+   "text": "36.72",
+   "conf": 1.0
+  },
+  {
+   "text": "2680720260204",
+   "conf": 0.99
+  },
+  {
+   "text": "1cENSALADILLA MARISCO2 kgGRATAE\"",
+   "conf": 0.93
+  },
+  {
+   "text": "4.000",
+   "conf": 0.99
+  },
+  {
+   "text": "13.90",
+   "conf": 1.0
+  },
+  {
+   "text": "55.60",
+   "conf": 0.99
+  },
+  {
+   "text": "3881020251224",
+   "conf": 0.97
+  },
+  {
+   "text": "I cCOCA BARQUETA CON BORDEPEQUENA CONG",
+   "conf": 0.92
+  },
+  {
+   "text": "3.300",
+   "conf": 0.99
+  },
+  {
+   "text": "55",
+   "conf": 0.99
+  },
+  {
+   "text": "0.64",
+   "conf": 1.0
+  },
+  {
+   "text": "35.20",
+   "conf": 1.0
+  },
+  {
+   "text": "Imp. Bruto% Dto.Imp Dto.Base Imponible% Iva",
+   "conf": 0.98
+  },
+  {
+   "text": "va",
+   "conf": 1.0
+  },
+  {
+   "text": "%R.E.",
+   "conf": 0.99
+  },
+  {
+   "text": "R.E.",
+   "conf": 0.98
+  },
+  {
+   "text": "Total Alb.",
+   "conf": 0.97
+  },
+  {
+   "text": "92.32",
+   "conf": 1.0
+  },
+  {
+   "text": "10%",
+   "conf": 0.98
+  },
+  {
+   "text": "9.23",
+   "conf": 1.0
+  },
+  {
+   "text": "35.20",
+   "conf": 1.0
+  },
+  {
+   "text": "4%",
+   "conf": 1.0
+  },
+  {
+   "text": "1.41",
+   "conf": 1.0
+  },
+  {
+   "text": "127,52",
+   "conf": 0.99
+  },
+  {
+   "text": "0.00",
+   "conf": 1.0
+  },
+  {
+   "text": "0.00",
+   "conf": 1.0
+  },
+  {
+   "text": "138.16",
+   "conf": 1.0
+  },
+  {
+   "text": "Observaciones :",
+   "conf": 0.98
+  },
+  {
+   "text": "Operaci¾n asegurada en CrÚdito y Cauci¾n",
+   "conf": 0.97
+  },
+  {
+   "text": "El ³nico justificante de esta mercancia es el Recibo Bancario, o en su defecto el Recibo emitido por la empresa",
+   "conf": 0.98
+  },
+  {
+   "text": "Sus datos figuran en un fichero, cuya finalidad es la gesti¾n integral de clientes. Ejercicio de derechos de",
+   "conf": 0.98
+  },
+  {
+   "text": "acceso, rectificaci¾n, cancelaci¾n y oposici¾n mediante escrito dirigido a Exclusivas Charcuval S.L.",
+   "conf": 0.99
+  }
+ ]
+}

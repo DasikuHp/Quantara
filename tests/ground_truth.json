@@ -1,0 +1,63 @@
+{
+  "_meta": "Valores correctos verificados a mano sobre ocr_raw_output.txt. fecha en dd/mm/yy. base/iva/total None en delivery notes. productos_esperados=null => conteo no verificado (solo informativo).",
+  "Charcuvalalbarn": {
+    "numero_albaran": "26A/2108", "fecha": "11/02/26",
+    "base_imponible": 127.52, "iva_total": 10.64, "total": 138.16,
+    "productos_esperados": 3
+  },
+  "chacuvalalbaran2": {
+    "numero_albaran": "26A/3262", "fecha": "04/03/26",
+    "base_imponible": 267.40, "iva_total": 26.74, "total": 294.14,
+    "productos_esperados": 3
+  },
+  "CocacolaAlbaran": {
+    "numero_albaran": "4530800844", "fecha": "04/03/26",
+    "base_imponible": 128.26, "iva_total": 26.93, "total": 155.19,
+    "productos_esperados": 3
+  },
+  "HortofruitLevante": {
+    "numero_albaran": "26004352", "fecha": "04/02/26",
+    "base_imponible": 17.85, "iva_total": 0.85, "total": 18.70,
+    "productos_esperados": 6
+  },
+  "HortofruitLevantealbaran2": {
+    "numero_albaran": "26008946", "fecha": "07/03/26",
+    "base_imponible": 41.25, "iva_total": 1.96, "total": 43.21,
+    "productos_esperados": 5
+  },
+  "Jasaalbaran2": {
+    "numero_albaran": "ALV260303735", "fecha": "04/03/26",
+    "base_imponible": 216.75, "iva_total": 21.68, "total": 238.43,
+    "productos_esperados": 7
+  },
+  "Jasaalimentacionalbaran": {
+    "numero_albaran": "ALV260203156", "fecha": "04/02/26",
+    "base_imponible": 65.90, "iva_total": 6.59, "total": 72.49,
+    "productos_esperados": 3
+  },
+  "cerveceriadelturia": {
+    "numero_albaran": "828097291", "fecha": "04/03/26",
+    "base_imponible": 440.16, "iva_total": 76.17, "total": 516.33,
+    "productos_esperados": null
+  },
+  "divinsdiaresaalbaran": {
+    "numero_albaran": "A26-0653", "fecha": "02/02/26",
+    "base_imponible": 154.16, "iva_total": 32.37, "total": 186.53,
+    "productos_esperados": 5
+  },
+  "nemakroAlbara": {
+    "numero_albaran": "0/0(017)0207/(2026)005540", "fecha": "26/02/26",
+    "base_imponible": 175.31, "iva_total": 21.19, "total": 196.50,
+    "productos_esperados": null
+  },
+  "Panamaralbaran": {
+    "numero_albaran": "8004065199", "fecha": "03/03/26",
+    "base_imponible": null, "iva_total": null, "total": null,
+    "delivery_note": true, "productos_esperados": null
+  },
+  "Lassalalbaran": {
+    "numero_albaran": "AL26001919", "fecha": "03/03/26",
+    "base_imponible": null, "iva_total": null, "total": null,
+    "delivery_note": true, "productos_esperados": null
+  }
+}

@@ -1,0 +1,537 @@
+{
+ "doc": "CocacolaAlbaran.pdf",
+ "lines": [
+  {
+   "text": "EUROPACIF",
+   "conf": 0.99
+  },
+  {
+   "text": "Atenci¾n al Cliente:",
+   "conf": 0.99
+  },
+  {
+   "text": "900246500",
+   "conf": 0.99
+  },
+  {
+   "text": "32",
+   "conf": 1.0
+  },
+  {
+   "text": "08950 Esplugues",
+   "conf": 0.99
+  },
+  {
+   "text": "DIRECCION DE ENVIO",
+   "conf": 0.93
+  },
+  {
+   "text": "RAZON SOCIAL",
+   "conf": 0.98
+  },
+  {
+   "text": "19188680 /",
+   "conf": 0.95
+  },
+  {
+   "text": "1158125 LA CUBIERTA MAR",
+   "conf": 0.98
+  },
+  {
+   "text": "LACUBIERTA MAR S.L.",
+   "conf": 0.99
+  },
+  {
+   "text": "CAM CANAL 91 CLUB NAUTICO",
+   "conf": 0.96
+  },
+  {
+   "text": "CM CANAL 91",
+   "conf": 0.95
+  },
+  {
+   "text": "46024-VALENCIA (Espafia)",
+   "conf": 0.98
+  },
+  {
+   "text": "46024-VALENCIA (Espaia)",
+   "conf": 0.93
+  },
+  {
+   "text": "B75717793",
+   "conf": 1.0
+  },
+  {
+   "text": "C",
+   "conf": 0.68
+  },
+  {
+   "text": "DOCUMENTO",
+   "conf": 1.0
+  },
+  {
+   "text": "N▄MERO",
+   "conf": 0.89
+  },
+  {
+   "text": "FECHA",
+   "conf": 0.99
+  },
+  {
+   "text": "GRUPO DE COBRC",
+   "conf": 0.89
+  },
+  {
+   "text": "FECHAVTO",
+   "conf": 0.98
+  },
+  {
+   "text": "04.03.2026",
+   "conf": 1.0
+  },
+  {
+   "text": "CREDITO",
+   "conf": 1.0
+  },
+  {
+   "text": "11.03.20261/1",
+   "conf": 1.0
+  },
+  {
+   "text": "NOTA ENTR.",
+   "conf": 0.96
+  },
+  {
+   "text": "4530800844",
+   "conf": 1.0
+  },
+  {
+   "text": "DIRECCION",
+   "conf": 0.95
+  },
+  {
+   "text": "TELEFONO",
+   "conf": 0.99
+  },
+  {
+   "text": "CLIENTE",
+   "conf": 0.99
+  },
+  {
+   "text": "PUNTO DE VENTA",
+   "conf": 1.0
+  },
+  {
+   "text": "CAM CANAL 91 CLUB NAUTICO 46024-VALENCIA",
+   "conf": 0.98
+  },
+  {
+   "text": "+649433518",
+   "conf": 1.0
+  },
+  {
+   "text": "1158125",
+   "conf": 1.0
+  },
+  {
+   "text": "LA CUBIERTA MAR",
+   "conf": 0.95
+  },
+  {
+   "text": "Carga:0158-A",
+   "conf": 1.0
+  },
+  {
+   "text": "FF.:F",
+   "conf": 0.97
+  },
+  {
+   "text": "Transporte: 26990488",
+   "conf": 1.0
+  },
+  {
+   "text": "R.Distr: E50158",
+   "conf": 0.95
+  },
+  {
+   "text": "Cadena: co0000",
+   "conf": 0.97
+  },
+  {
+   "text": "Deleg:",
+   "conf": 0.99
+  },
+  {
+   "text": "Valencia Ciudad",
+   "conf": 0.97
+  },
+  {
+   "text": "Region:LEVANTE",
+   "conf": 0.92
+  },
+  {
+   "text": ":",
+   "conf": 0.91
+  },
+  {
+   "text": "Ruta Preventa: 3QE",
+   "conf": 1.0
+  },
+  {
+   "text": "CANTIDAD",
+   "conf": 1.0
+  },
+  {
+   "text": "PRECIO",
+   "conf": 1.0
+  },
+  {
+   "text": "BASEDTO",
+   "conf": 0.99
+  },
+  {
+   "text": "CODIGO EAN",
+   "conf": 0.92
+  },
+  {
+   "text": "ART.",
+   "conf": 0.97
+  },
+  {
+   "text": "DESCRIPCION",
+   "conf": 0.97
+  },
+  {
+   "text": "1,00",
+   "conf": 0.96
+  },
+  {
+   "text": "24,96",
+   "conf": 0.99
+  },
+  {
+   "text": "24,96",
+   "conf": 0.96
+  },
+  {
+   "text": "00000904181502548",
+   "conf": 1.0
+  },
+  {
+   "text": "SPRITE VR20 C24",
+   "conf": 0.99
+  },
+  {
+   "text": "24,96",
+   "conf": 0.99
+  },
+  {
+   "text": "11,36-",
+   "conf": 0.97
+  },
+  {
+   "text": "Dto. Base",
+   "conf": 0.97
+  },
+  {
+   "text": "0,02",
+   "conf": 0.99
+  },
+  {
+   "text": "0,02",
+   "conf": 0.95
+  },
+  {
+   "text": "Punto Verde",
+   "conf": 0.98
+  },
+  {
+   "text": "SUBUNIDADES/NETO",
+   "conf": 1.0
+  },
+  {
+   "text": "24",
+   "conf": 1.0
+  },
+  {
+   "text": "0,568",
+   "conf": 0.98
+  },
+  {
+   "text": "13,62",
+   "conf": 0.97
+  },
+  {
+   "text": "COCACOLA VR237 C24.",
+   "conf": 0.97
+  },
+  {
+   "text": "2,00",
+   "conf": 0.95
+  },
+  {
+   "text": "25,44",
+   "conf": 0.98
+  },
+  {
+   "text": "50,88",
+   "conf": 1.0
+  },
+  {
+   "text": "0000090343599",
+   "conf": 1.0
+  },
+  {
+   "text": "544",
+   "conf": 1.0
+  },
+  {
+   "text": "50,88",
+   "conf": 0.98
+  },
+  {
+   "text": "12,97-",
+   "conf": 0.97
+  },
+  {
+   "text": "Dto. Base",
+   "conf": 0.97
+  },
+  {
+   "text": "0,03",
+   "conf": 0.98
+  },
+  {
+   "text": "0,05",
+   "conf": 0.97
+  },
+  {
+   "text": "Punto Verde",
+   "conf": 0.97
+  },
+  {
+   "text": "SUBUNIDADES/NETO",
+   "conf": 1.0
+  },
+  {
+   "text": "48",
+   "conf": 0.99
+  },
+  {
+   "text": "0,791",
+   "conf": 0.99
+  },
+  {
+   "text": "37,96",
+   "conf": 0.97
+  },
+  {
+   "text": "COCACOLA ZER VR237 C24",
+   "conf": 0.97
+  },
+  {
+   "text": "2,00",
+   "conf": 0.97
+  },
+  {
+   "text": "25,44",
+   "conf": 0.98
+  },
+  {
+   "text": "50,88",
+   "conf": 0.97
+  },
+  {
+   "text": "0000090357732",
+   "conf": 1.0
+  },
+  {
+   "text": "554",
+   "conf": 1.0
+  },
+  {
+   "text": "50,88",
+   "conf": 0.97
+  },
+  {
+   "text": "12,97-",
+   "conf": 0.96
+  },
+  {
+   "text": "Dto. Base",
+   "conf": 0.98
+  },
+  {
+   "text": "0,03",
+   "conf": 0.98
+  },
+  {
+   "text": "0,05",
+   "conf": 0.99
+  },
+  {
+   "text": "Punto Verde",
+   "conf": 0.97
+  },
+  {
+   "text": "SUBUNIDADES/NETO",
+   "conf": 0.99
+  },
+  {
+   "text": "48",
+   "conf": 1.0
+  },
+  {
+   "text": "0,791",
+   "conf": 1.0
+  },
+  {
+   "text": "37,96",
+   "conf": 1.0
+  },
+  {
+   "text": "524",
+   "conf": 1.0
+  },
+  {
+   "text": "FANTA NAR VR237 C24",
+   "conf": 0.95
+  },
+  {
+   "text": "2,00",
+   "conf": 0.99
+  },
+  {
+   "text": "25,44",
+   "conf": 0.98
+  },
+  {
+   "text": "50,88",
+   "conf": 0.96
+  },
+  {
+   "text": "0000054007567",
+   "conf": 1.0
+  },
+  {
+   "text": "Dto. Base",
+   "conf": 0.96
+  },
+  {
+   "text": "50,88",
+   "conf": 0.98
+  },
+  {
+   "text": "12,21-",
+   "conf": 0.98
+  },
+  {
+   "text": "Punto Verde",
+   "conf": 0.93
+  },
+  {
+   "text": "0,03",
+   "conf": 0.98
+  },
+  {
+   "text": "0,05",
+   "conf": 0.95
+  },
+  {
+   "text": "SUBUNIDADES/NETO",
+   "conf": 1.0
+  },
+  {
+   "text": "48",
+   "conf": 1.0
+  },
+  {
+   "text": "0,807",
+   "conf": 0.99
+  },
+  {
+   "text": "38,72",
+   "conf": 0.93
+  },
+  {
+   "text": "TOTAL PRODUCTOS",
+   "conf": 0.99
+  },
+  {
+   "text": "128,09",
+   "conf": 0.95
+  },
+  {
+   "text": "TOTAL PUNTO VERDE",
+   "conf": 0.97
+  },
+  {
+   "text": "0,17",
+   "conf": 0.99
+  },
+  {
+   "text": "RECIBI MERCANCIAS:",
+   "conf": 0.97
+  },
+  {
+   "text": "NIF:",
+   "conf": 1.0
+  },
+  {
+   "text": "NOMBRE:",
+   "conf": 0.99
+  },
+  {
+   "text": "TIPO",
+   "conf": 1.0
+  },
+  {
+   "text": "BASE IMPONIBLE",
+   "conf": 0.99
+  },
+  {
+   "text": "IMPUBSTOS",
+   "conf": 0.94
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 1.0
+  },
+  {
+   "text": "(c)2016 The Coca-Cola Comg",
+   "conf": 0.95
+  },
+  {
+   "text": "128,26",
+   "conf": 0.98
+  },
+  {
+   "text": "IVA21 %",
+   "conf": 0.93
+  },
+  {
+   "text": "26,93",
+   "conf": 0.98
+  },
+  {
+   "text": "TOTAL BASES:128,26",
+   "conf": 0.98
+  },
+  {
+   "text": "TOTAL IMPUESTOS: 26,93",
+   "conf": 1.0
+  },
+  {
+   "text": "TOTAL:155,19EUROS",
+   "conf": 0.97
+  },
+  {
+   "text": "N³m.Albaran:",
+   "conf": 0.95
+  },
+  {
+   "text": "4530800844",
+   "conf": 1.0
+  }
+ ]
+}

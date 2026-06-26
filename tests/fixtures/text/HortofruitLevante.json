@@ -1,0 +1,453 @@
+{
+ "doc": "HortofruitLevante.pdf",
+ "lines": [
+  {
+   "text": "SERV.HORTOFRUTICOLAS DE LEVANTE,S.L",
+   "conf": 0.98
+  },
+  {
+   "text": "sh",
+   "conf": 1.0
+  },
+  {
+   "text": "MERCOVASA,PTOS.80-81",
+   "conf": 0.97
+  },
+  {
+   "text": "46540 EL PUIG (VALENCIA)",
+   "conf": 0.97
+  },
+  {
+   "text": "Slevante",
+   "conf": 0.85
+  },
+  {
+   "text": "C.I.F.B-98334378",
+   "conf": 0.99
+  },
+  {
+   "text": "TEL.: 961 472 619",
+   "conf": 1.0
+  },
+  {
+   "text": "FAX: 961 472 461",
+   "conf": 0.99
+  },
+  {
+   "text": "CLIENTE:43002982",
+   "conf": 0.97
+  },
+  {
+   "text": "RGSEAA: 21.026407/V",
+   "conf": 0.99
+  },
+  {
+   "text": "LACUBIERTA MAR SL",
+   "conf": 0.97
+  },
+  {
+   "text": "CAMINO CANAL NUM 91",
+   "conf": 0.99
+  },
+  {
+   "text": "46024 VALENCIA (VALENCIA)",
+   "conf": 0.97
+  },
+  {
+   "text": "C.I.F B75717793",
+   "conf": 0.97
+  },
+  {
+   "text": "NO ALBARAN",
+   "conf": 0.96
+  },
+  {
+   "text": "FECHA",
+   "conf": 0.99
+  },
+  {
+   "text": "736 CUBIERTA MAR",
+   "conf": 1.0
+  },
+  {
+   "text": "0/2600435204/02/26",
+   "conf": 1.0
+  },
+  {
+   "text": "Bultos",
+   "conf": 0.99
+  },
+  {
+   "text": "Descripci¾n",
+   "conf": 0.97
+  },
+  {
+   "text": "Origen",
+   "conf": 0.99
+  },
+  {
+   "text": "Trazabilidad",
+   "conf": 1.0
+  },
+  {
+   "text": "Bruto",
+   "conf": 0.99
+  },
+  {
+   "text": "Tara",
+   "conf": 1.0
+  },
+  {
+   "text": "Neto",
+   "conf": 1.0
+  },
+  {
+   "text": "Precio",
+   "conf": 0.99
+  },
+  {
+   "text": "%IVA",
+   "conf": 0.96
+  },
+  {
+   "text": "Importe",
+   "conf": 0.99
+  },
+  {
+   "text": "Puerro 'Caja 1a .",
+   "conf": 0.9
+  },
+  {
+   "text": "11",
+   "conf": 0.69
+  },
+  {
+   "text": "Espana",
+   "conf": 0.97
+  },
+  {
+   "text": "40000530701251201-4152689",
+   "conf": 0.98
+  },
+  {
+   "text": "3,10",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "3,10",
+   "conf": 0.97
+  },
+  {
+   "text": "2,080",
+   "conf": 1.0
+  },
+  {
+   "text": "4,00",
+   "conf": 0.99
+  },
+  {
+   "text": "6,45",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 0.99
+  },
+  {
+   "text": "Tomate Pera 1a GRANEt",
+   "conf": 0.97
+  },
+  {
+   "text": "Espana",
+   "conf": 0.97
+  },
+  {
+   "text": "400000090200260120-4215752",
+   "conf": 0.99
+  },
+  {
+   "text": "1,10",
+   "conf": 0.98
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "1,10",
+   "conf": 0.99
+  },
+  {
+   "text": "1,520",
+   "conf": 0.99
+  },
+  {
+   "text": "4,00",
+   "conf": 0.99
+  },
+  {
+   "text": "1,67",
+   "conf": 1.0
+  },
+  {
+   "text": "1Tomate Raff GRANEL",
+   "conf": 0.98
+  },
+  {
+   "text": "Espana",
+   "conf": 0.98
+  },
+  {
+   "text": "400003300203251107-4122657",
+   "conf": 1.0
+  },
+  {
+   "text": "0,70",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,70",
+   "conf": 0.99
+  },
+  {
+   "text": "3,680",
+   "conf": 1.0
+  },
+  {
+   "text": "4,00",
+   "conf": 0.99
+  },
+  {
+   "text": "2,58",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "Cebollino Manojo 100 g",
+   "conf": 0.99
+  },
+  {
+   "text": "Espana",
+   "conf": 0.99
+  },
+  {
+   "text": "400003691320260109-4205625",
+   "conf": 1.0
+  },
+  {
+   "text": "1,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "1,00",
+   "conf": 0.99
+  },
+  {
+   "text": "2,160",
+   "conf": 0.99
+  },
+  {
+   "text": "10,00",
+   "conf": 1.0
+  },
+  {
+   "text": "2,16",
+   "conf": 0.99
+  },
+  {
+   "text": "1",
+   "conf": 1.0
+  },
+  {
+   "text": "Cebolla Morada",
+   "conf": 0.99
+  },
+  {
+   "text": "Espana",
+   "conf": 0.97
+  },
+  {
+   "text": "400001031103260115-4211222",
+   "conf": 1.0
+  },
+  {
+   "text": "1,50",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "1,50",
+   "conf": 0.99
+  },
+  {
+   "text": "1,440",
+   "conf": 1.0
+  },
+  {
+   "text": "4,00",
+   "conf": 0.99
+  },
+  {
+   "text": "2,16",
+   "conf": 1.0
+  },
+  {
+   "text": "1Limon",
+   "conf": 0.96
+  },
+  {
+   "text": "Espana",
+   "conf": 0.95
+  },
+  {
+   "text": "400003342501251202-4154305",
+   "conf": 1.0
+  },
+  {
+   "text": "1,80",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "1,80",
+   "conf": 0.98
+  },
+  {
+   "text": "1,570",
+   "conf": 0.99
+  },
+  {
+   "text": "4,00",
+   "conf": 0.99
+  },
+  {
+   "text": "2,83",
+   "conf": 0.98
+  },
+  {
+   "text": "IMP.BRUTO",
+   "conf": 0.98
+  },
+  {
+   "text": "%DTO",
+   "conf": 0.94
+  },
+  {
+   "text": "IMPORTE",
+   "conf": 0.99
+  },
+  {
+   "text": "B.IMPONIBLE",
+   "conf": 0.98
+  },
+  {
+   "text": "%IVA",
+   "conf": 0.98
+  },
+  {
+   "text": "I.V.A.",
+   "conf": 0.99
+  },
+  {
+   "text": "%RE",
+   "conf": 0.98
+  },
+  {
+   "text": "R.E.",
+   "conf": 0.99
+  },
+  {
+   "text": "TOTAL ALBARAN",
+   "conf": 0.95
+  },
+  {
+   "text": "2,16",
+   "conf": 0.99
+  },
+  {
+   "text": "10,0",
+   "conf": 1.0
+  },
+  {
+   "text": "0,22",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 0.99
+  },
+  {
+   "text": "0,00",
+   "conf": 0.98
+  },
+  {
+   "text": "17,85",
+   "conf": 0.99
+  },
+  {
+   "text": "0,0",
+   "conf": 0.98
+  },
+  {
+   "text": "0,00",
+   "conf": 1.0
+  },
+  {
+   "text": "15,69",
+   "conf": 1.0
+  },
+  {
+   "text": "4,0",
+   "conf": 0.99
+  },
+  {
+   "text": "0,63",
+   "conf": 0.98
+  },
+  {
+   "text": "0,00",
+   "conf": 1.0
+  },
+  {
+   "text": "0,00",
+   "conf": 0.98
+  },
+  {
+   "text": "18,70",
+   "conf": 0.99
+  },
+  {
+   "text": "OBSERVACIONES",
+   "conf": 0.98
+  },
+  {
+   "text": "Operaci¾n asegurada en",
+   "conf": 0.98
+  },
+  {
+   "text": "CrÚditoy Cauci¾n",
+   "conf": 0.95
+  }
+ ]
+}
