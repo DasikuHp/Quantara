@@ -8,11 +8,14 @@ Bugs corregidos respecto v2:
   - Panamar/Lassal: no tienen importes (delivery notes) â€” no usar fallback global
 """
 import re
-import numpy as np
 
 from quantara.config import (
     OCR_LANG, OCR_USE_ANGLE_CLS, OCR_ENABLE_MKLDNN, OCR_DROP_SCORE,
 )
+
+# numpy se importa de forma perezosa dentro de extract(): así el parser
+# (_parse y helpers, Python puro) puede importarse y testearse sin numpy ni
+# PaddleOCR — base del harness de evaluación offline.
 
 # ─────────────────────────────────────────────────────────────────────
 # SINGLETON DEL MOTOR OCR
@@ -57,6 +60,7 @@ class DonutExtractor:
     # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     def extract(self, image):
         try:
+            import numpy as np
             img_array = np.array(image)
             result = self.ocr.ocr(img_array, cls=OCR_USE_ANGLE_CLS)
             if not result or not result[0]:
@@ -75,6 +79,115 @@ class DonutExtractor:
             return r
         except Exception as e:
             return {"error": str(e), "campos_fallidos": ["ocr"]}
+
+    # ─────────────────────────────────────────────────────────────────
+    # PRODUCTOS POR LÍNEAS (sin geometría)
+    # Las fixtures/PaddleOCR conservan cada línea OCR por separado. Para los
+    # proveedores cuyas líneas de producto llegan en orden secuencial
+    # (código → descripción → números → terminador) esto recupera productos
+    # que el regex sobre texto aplanado pierde. Se desarrolla y mide offline.
+    # ─────────────────────────────────────────────────────────────────
+    @staticmethod
+    def _es_num(s):
+        return bool(re.match(r'^\d{1,3}(?:[.,]\d{3})*[.,]\d{2,3}$|^\d+[.,]\d{2,3}$',
+                             s.strip()))
+
+    def _productos_lineas(self, texts, pt):
+        prods = []
+        n = len(texts)
+
+        if pt in ('jasa',):
+            i = 0
+            while i < n:
+                if re.match(r'^\d{8}$', texts[i].strip()):
+                    code = texts[i].strip()
+                    desc = texts[i + 1].strip() if i + 1 < n else ''
+                    j, nums, unidad = i + 2, [], 'ud'
+                    while j < n:
+                        t = texts[j].strip()
+                        if t.startswith('F.C') or re.match(r'^\d{8}$', t) \
+                                or t.upper().startswith('BASE') or t == 'B.I.':
+                            break
+                        if t.upper() in ('CAJA', 'U', 'K', 'UD', 'KG'):
+                            unidad = t.lower()
+                        elif self._es_num(t):
+                            nums.append(t)
+                        j += 1
+                    if desc and nums and not self._es_num(desc):
+                        prods.append({
+                            "codigo": code, "descripcion": desc,
+                            "cantidad": self._f(nums[0]), "unidad": unidad,
+                            "precio_unitario": None,
+                            "importe": self._f(nums[-1]),
+                        })
+                    i = j
+                    continue
+                i += 1
+
+        elif pt == 'charcuval':
+            i = 0
+            while i < n:
+                if re.match(r'^\D?\d{11,13}$', texts[i].strip()):
+                    code = texts[i].strip()
+                    desc = texts[i + 1].strip() if i + 1 < n else ''
+                    j, nums = i + 2, []
+                    while j < n:
+                        t = texts[j].strip()
+                        if re.match(r'^\D?\d{11,13}$', t) or t.startswith('Imp') \
+                                or t.startswith('Observ'):
+                            break
+                        if self._es_num(t):
+                            nums.append(t)
+                        j += 1
+                    if desc and nums and not self._es_num(desc):
+                        prods.append({
+                            "codigo": code, "descripcion": desc,
+                            "cantidad": self._f(nums[0]), "unidad": "ud",
+                            "precio_unitario": None,
+                            "importe": self._f(nums[-1]),
+                        })
+                    i = j
+                    continue
+                i += 1
+
+        elif pt == 'divins':
+            # desc viene fusionada con el código: "1807 TAMBORA 3/4(6)"
+            i = 0
+            while i < n:
+                m = re.match(r'^(\d{3,5})\s*([A-Za-zÁÉÍÓÚÑ].{3,45})$', texts[i].strip())
+                if m:
+                    code, desc = m.group(1), m.group(2).strip()
+                    j, nums = i + 1, []
+                    while j < n and not re.match(
+                            r'^(\d{3,5})\s*[A-Za-z]', texts[j].strip()) \
+                            and not texts[j].strip().upper().startswith('TOTAL'):
+                        if self._es_num(texts[j].strip()):
+                            nums.append(texts[j].strip())
+                        j += 1
+                    if nums:
+                        prods.append({
+                            "codigo": code, "descripcion": desc,
+                            "cantidad": None, "unidad": "ud",
+                            "precio_unitario": None,
+                            "importe": self._f(nums[-1]),
+                        })
+                    i = j
+                    continue
+                i += 1
+
+        return prods
+
+    def parse_from_texts(self, texts):
+        """
+        Parsea una lista de líneas OCR (sin imagen ni geometría).
+        Punto de entrada del harness de evaluación offline: replica extract()
+        salvo la inferencia y el fallback geométrico (que requiere cajas).
+        Construir vía DonutExtractor.__new__ para no cargar el modelo.
+        """
+        full_text = ' '.join(texts)
+        r = self._parse(texts, full_text)
+        self._reconcile(r)
+        return r
 
     # ─────────────────────────────────────────────────────────────────
     # GEOMETRÍA: reconstrucción de filas a partir de bounding boxes
@@ -695,6 +808,10 @@ class DonutExtractor:
         if not r["total"] and pt not in SIN_IMPORTES:
             nums = re.findall(r'\b(\d{2,4}[.,]\d{2})\b', ft)
             if nums: r["total"] = self._f(nums[-1])
+
+        # Productos: fallback por lineas si el regex no extrajo ninguno.
+        if not r["productos"]:
+            r["productos"] = self._productos_lineas(texts, pt)
 
         # â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
         # NIVEL DE CONFIANZA Y CAMPOS FALLIDOS
