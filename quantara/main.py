@@ -13,6 +13,13 @@ from quantara.graph.database import init_db
 async def lifespan(app: FastAPI):
     # Evento Startup: Iniciar Base de Datos SQLite/Grafos
     init_db()
+    # Precarga del modelo OCR una sola vez (warmup). Protegido: si PaddleOCR
+    # no está instalado, la app arranca igual y falla solo en /upload.
+    try:
+        from quantara.ocr.donut_model import get_ocr
+        get_ocr()
+    except Exception:
+        pass
     yield
     # Eventos de Shutdown / Limpieza podrían ir aquí
 

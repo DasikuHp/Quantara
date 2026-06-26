@@ -10,12 +10,47 @@ Bugs corregidos respecto v2:
 import re
 import numpy as np
 
+from quantara.config import (
+    OCR_LANG, OCR_USE_ANGLE_CLS, OCR_ENABLE_MKLDNN, OCR_DROP_SCORE,
+)
+
+# ─────────────────────────────────────────────────────────────────────
+# SINGLETON DEL MOTOR OCR
+# El modelo PaddleOCR (det + rec + cls) se carga UNA sola vez por proceso.
+# Antes se reinstanciaba en cada /upload, recargando los pesos desde disco
+# en cada petición — el mayor desperdicio de cómputo del sistema.
+# ─────────────────────────────────────────────────────────────────────
+_OCR_SINGLETON = None
+
+
+def get_ocr():
+    global _OCR_SINGLETON
+    if _OCR_SINGLETON is None:
+        from paddleocr import PaddleOCR
+        kwargs = dict(
+            use_angle_cls=OCR_USE_ANGLE_CLS,
+            lang=OCR_LANG,
+            show_log=False,
+            drop_score=OCR_DROP_SCORE,
+        )
+        try:
+            kwargs["enable_mkldnn"] = OCR_ENABLE_MKLDNN
+        except Exception:
+            pass
+        try:
+            _OCR_SINGLETON = PaddleOCR(**kwargs)
+        except TypeError:
+            # Versiones antiguas de la API no aceptan enable_mkldnn.
+            kwargs.pop("enable_mkldnn", None)
+            _OCR_SINGLETON = PaddleOCR(**kwargs)
+    return _OCR_SINGLETON
+
 
 class DonutExtractor:
 
     def __init__(self):
-        from paddleocr import PaddleOCR
-        self.ocr = PaddleOCR(use_angle_cls=True, lang='es', show_log=False)
+        # Reutiliza el singleton: instanciar DonutExtractor ya no carga pesos.
+        self.ocr = get_ocr()
 
     # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     # PUNTO DE ENTRADA
@@ -23,14 +58,138 @@ class DonutExtractor:
     def extract(self, image):
         try:
             img_array = np.array(image)
-            result = self.ocr.ocr(img_array, cls=True)
+            result = self.ocr.ocr(img_array, cls=OCR_USE_ANGLE_CLS)
             if not result or not result[0]:
                 return {}
+            # full_text se mantiene IDÉNTICO al original para no alterar el
+            # comportamiento de los regex por proveedor ya calibrados.
             texts = [line[1][0] for line in result[0] if line[1][1] > 0.3]
             full_text = ' '.join(texts)
-            return self._parse(texts, full_text)
+            words = self._words_from_result(result[0])
+            r = self._parse(texts, full_text)
+            # Capa aditiva basada en geometría: solo rellena lo que falló y
+            # cruza base+IVA≈total para ajustar la confianza. Nunca pisa un
+            # valor ya extraído por la rama del proveedor.
+            self._geometric_fallback(words, r)
+            self._reconcile(r)
+            return r
         except Exception as e:
             return {"error": str(e), "campos_fallidos": ["ocr"]}
+
+    # ─────────────────────────────────────────────────────────────────
+    # GEOMETRÍA: reconstrucción de filas a partir de bounding boxes
+    # ─────────────────────────────────────────────────────────────────
+    @staticmethod
+    def _words_from_result(lines):
+        """Convierte el resultado crudo de PaddleOCR en tokens con posición."""
+        words = []
+        for ln in lines:
+            try:
+                box, (text, conf) = ln[0], ln[1]
+                xs = [p[0] for p in box]
+                ys = [p[1] for p in box]
+                words.append({
+                    "text": text, "conf": float(conf),
+                    "x0": min(xs), "x1": max(xs),
+                    "y0": min(ys), "y1": max(ys),
+                    "cx": sum(xs) / len(xs), "cy": sum(ys) / len(ys),
+                    "h": max(ys) - min(ys),
+                })
+            except Exception:
+                continue
+        return words
+
+    @staticmethod
+    def _numbers_in(text):
+        """Extrae importes con decimales (1.234,56 / 1234.56 / 12,34)."""
+        return re.findall(r'\d{1,3}(?:[.,]\d{3})*[.,]\d{2}(?!\d)|\d+[.,]\d{2}(?!\d)',
+                          text)
+
+    def _label_amount(self, words, etiquetas, excluir=()):
+        """
+        Busca una etiqueta (p.ej. 'TOTAL') y devuelve el importe más cercano:
+        primero a su derecha en la misma fila, si no en la fila inmediata
+        inferior alineado por X. Generaliza a proveedores sin regex dedicado.
+        """
+        for w in words:
+            t = w["text"].upper()
+            if not any(e in t for e in etiquetas):
+                continue
+            if any(x in t for x in excluir):
+                continue
+            tol = max(w["h"], 6) * 0.8
+            # 1) números en la propia celda de la etiqueta (ej: "TOTAL:155,19")
+            here = self._numbers_in(w["text"])
+            if here:
+                v = self._f(here[-1])
+                if v is not None:
+                    return v
+            # 2) misma fila, a la derecha
+            fila = [o for o in words
+                    if abs(o["cy"] - w["cy"]) <= tol and o["x0"] >= w["x1"] - 2]
+            fila.sort(key=lambda o: o["x0"])
+            for o in fila:
+                nums = self._numbers_in(o["text"])
+                if nums:
+                    v = self._f(nums[-1])
+                    if v is not None:
+                        return v
+            # 3) fila inmediata inferior, alineada por X con la etiqueta
+            abajo = [o for o in words
+                     if 0 < (o["cy"] - w["cy"]) <= tol * 3
+                     and abs(o["cx"] - w["cx"]) <= max(w["x1"] - w["x0"], 60)]
+            abajo.sort(key=lambda o: o["cy"])
+            for o in abajo:
+                nums = self._numbers_in(o["text"])
+                if nums:
+                    v = self._f(nums[-1])
+                    if v is not None:
+                        return v
+        return None
+
+    def _geometric_fallback(self, words, r):
+        """Rellena SOLO campos financieros aún vacíos usando etiquetas+posición."""
+        SIN_IMPORTES = {'panamar', 'lassal', 'hielos'}
+        if r.get("proveedor_tipo") in SIN_IMPORTES or not words:
+            return
+        if r.get("total") is None:
+            r["total"] = self._label_amount(
+                words, ("TOTAL",),
+                excluir=("BASE", "BASES", "IMPUESTO", "IVA", "PARCIAL"))
+        if r.get("base_imponible") is None:
+            r["base_imponible"] = self._label_amount(
+                words, ("BASE IMPONIBLE", "B.IMPONIBLE", "TOTAL BASES", "BASE"),
+                excluir=("RETEN",))
+        if r.get("iva_total") is None:
+            r["iva_total"] = self._label_amount(
+                words, ("CUOTA", "TOTAL IMPUESTOS", "I.V.A", "IVA"),
+                excluir=("%", "BASE"))
+
+    def _reconcile(self, r):
+        """
+        Coherencia aritmética base + IVA ≈ total.
+        - Si falta el total pero hay base e IVA, lo deriva.
+        - Si los tres existen pero no cuadran, baja la confianza a 'media'.
+        """
+        b, i, t = r.get("base_imponible"), r.get("iva_total"), r.get("total")
+        if t is None and b is not None and i is not None:
+            r["total"] = round(b + i, 2)
+            t = r["total"]
+        if b is not None and i is not None and t is not None:
+            esperado = round(b + i, 2)
+            if abs(esperado - t) > max(0.02, 0.01 * t):
+                if r.get("confianza") == "alta":
+                    r["confianza"] = "media"
+                if "inconsistencia_aritmetica" not in r.get("campos_fallidos", []):
+                    r.setdefault("campos_fallidos", []).append(
+                        "inconsistencia_aritmetica")
+        # Recalcular campos financieros que el fallback acaba de rellenar.
+        SIN_IMPORTES = {'panamar', 'lassal', 'hielos'}
+        if r.get("proveedor_tipo") not in SIN_IMPORTES:
+            r["campos_fallidos"] = [
+                c for c in r.get("campos_fallidos", [])
+                if c == "inconsistencia_aritmetica" or r.get(c) in (None, [], "")
+            ]
 
     # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     # UTILIDADES
@@ -41,13 +200,24 @@ class DonutExtractor:
             return None
         try:
             s = str(s).strip()
-            s = re.sub(r'[â‚¬E\s]', '', s)
+            s = re.sub(r'[â‚¬â‚¬E\s]', '', s)
             s = s.rstrip('.')
-            # Elimina dÃ­gito extra: '238.436' â†’ '238.43'
-            m = re.match(r'^(\d+[.,]\d{2})\d+$', s)
+            if not s:
+                return None
+            # Separadores: si hay punto Y coma, el decimal es el Ãºltimo que
+            # aparece; el otro es separador de millares.
+            #   '1.234,56' â†’ '1234.56'   '1,234.56' â†’ '1234.56'
+            if '.' in s and ',' in s:
+                if s.rfind(',') > s.rfind('.'):
+                    s = s.replace('.', '').replace(',', '.')
+                else:
+                    s = s.replace(',', '')
+            else:
+                s = s.replace(',', '.')
+            # Elimina dÃ­gito extra: '238.436' â†’ '238.43' (caso JASA)
+            m = re.match(r'^(\d+\.\d{2})\d+$', s)
             if m:
                 s = m.group(1)
-            s = s.replace(',', '.')
             return round(float(s), 2)
         except Exception:
             return None

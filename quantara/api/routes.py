@@ -23,30 +23,28 @@ def process_document(
     from quantara.graph.database import SessionLocal
     from quantara.graph.models import Albaran, Proveedor
     from quantara.ocr.donut_model import DonutExtractor
-    from quantara.ocr.preprocessor import pdf_to_image, load_image
+    from quantara.ocr.preprocessor import pdf_bytes_to_image, load_image, resize_image
     from quantara.core.validator import validate_albaran_completo
     from quantara.core.normalizer import normalize_proveedor
-    import tempfile, os
 
     db = SessionLocal()
     try:
         contents = file.file.read()
-        suffix = ".pdf" if "pdf" in file.content_type else ".jpg"
-        with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
-            tmp.write(contents)
-            tmp_path = tmp.name
+        es_pdf = "pdf" in (file.content_type or "")
 
-        if suffix == ".pdf":
-            images = pdf_to_image(tmp_path)
+        if es_pdf:
+            images = pdf_bytes_to_image(contents)   # solo 1ª página, DPI fijo
             image = images[0] if images else None
         else:
-            image = load_image(tmp_path)
-
-        os.unlink(tmp_path)
+            image = load_image(contents)
 
         if not image:
             raise HTTPException(status_code=400, detail="No se pudo procesar el archivo")
 
+        # Redimensiona antes de la red de detección: menos píxeles, menos coste.
+        image = resize_image(image)
+
+        # DonutExtractor reutiliza el singleton OCR: no recarga pesos.
         extractor = DonutExtractor()
         raw = extractor.extract(image)
         validated = validate_albaran_completo(raw)

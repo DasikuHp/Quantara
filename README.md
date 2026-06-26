@@ -14,11 +14,14 @@
 
 ---
 
-**Quantara** es una potente API REST diseñada para automatizar la extracción de información técnica y comercial a partir de facturas y albaranes digitales. Sustentada en modelos de visión Transformers de estado del arte (*Donut Model*), la plataforma procesa documentos, normaliza datos de interés y consolida una base de datos relacional para el cálculo transversal de márgenes, comparación de costes y control exhaustivo del gasto corporativo.
+**Quantara** es una potente API REST diseñada para automatizar la extracción de información técnica y comercial a partir de facturas y albaranes digitales. Sustentada en el motor de OCR ligero **PaddleOCR** (PP-OCR, CPU), la plataforma procesa documentos, normaliza datos de interés y consolida una base de datos relacional para el cálculo transversal de márgenes, comparación de costes y control exhaustivo del gasto corporativo.
+
+> ⚡ **Optimizado para bajo cómputo**: el modelo OCR se carga **una sola vez** por proceso (singleton, no por petición), el preprocesado rasteriza solo la primera página a DPI fijo y redimensiona antes de inferir, y el runtime prescinde de `torch`/`transformers` (no usados) para una instalación ~2-3 GB más ligera.
 
 ## ✨ Características Principales
 
-* 👁️ **OCR Automatizado Libre de Tesseract**: Convierte al instante imágenes o PDFs en datos estructurados (Proveedor, fecha, base imponible y total) valiéndose únicamente del modelo *Transformer*.
+* 👁️ **OCR Automatizado Libre de Tesseract**: Convierte al instante imágenes o PDFs en datos estructurados (Proveedor, fecha, base imponible y total) mediante PaddleOCR + un extractor por geometría y reglas adaptativas por proveedor.
+* 🧮 **Reconocimiento robusto con validación cruzada**: un rellenado basado en la posición de las etiquetas (`TOTAL`, `BASE`, `IVA`) recupera campos que los regex no capturan, y una comprobación aritmética `base + IVA ≈ total` ajusta automáticamente el nivel de confianza.
 * 🛒 **Desglose Inteligente de Líneas de Pedido**: Analiza resultados mediante expresiones regulares adaptativas por proveedor para extraer filas de productos unitarios, sus cantidades e importes.
 * 📈 **Business Intelligence & Dashboarding**: Genera estadísticas agregativas en tiempo real vía endpoints. Evalúa los volúmenes de compra por entidad, identifica productos de alta demanda y compara el histórico de costes adquiridos entre diferentes proveedores.
 * 🛡️ **Tolerancia a Fallos & Feedback (HITL)**: Los campos ilegibles o dudosos se interceptan y notifican dinámicamente. Integramos una capa *Human in the Loop* a través de endpoints de validación y _feedback_ permitiendo ajustar sesgos y retroalimentar datos sanos.
@@ -31,8 +34,8 @@
 | Área | Tecnologías Principales |
 | :--- | :--- |
 | **API & Backend** | `FastAPI`, `Uvicorn`, `python-multipart`, `Pydantic` |
-| **Inteligencia Artificial**| `PyTorch` (`torch`), `Transformers` (*naver-clova-ix/donut-base*), `Pillow`, `MLflow` |
-| **Datos y Persistencia** | `SQLAlchemy` (`psycopg2-binary` pre-equipado), motor local `SQLite` (*quantara.db*) |
+| **Inteligencia Artificial**| `PaddleOCR` / `PaddlePaddle` (PP-OCR, CPU), `Pillow`, `pdf2image`, `NumPy` |
+| **Datos y Persistencia** | `SQLAlchemy` sobre motor local `SQLite` (*quantara.db*) |
 
 ---
 
@@ -107,8 +110,11 @@ Definidas precompiladas sobre el entorno base dentro de `quantara/config.py`:
 | `BASE_DIR` | Identifica la topología de la raíz del sistema de manera relativa. | `os.path.dirname(os.path.abspath(__file__))` |
 | `DB_PATH` | Especifica la ubicación del volcado relacional SQLite principal. | `data/quantara.db` |
 | `UPLOAD_DIR` | Directorio con recolección de archivos y subidas efímeras | `data/albaranes` |
-| `MODEL_NAME` | Referencia remota del transformador utilizado en predicciones HF | `naver-clova-ix/donut-base` |
-| `MAX_IMAGE_SIZE` | Rescalado predeterminado exigido previo a entrar en red neuronal | `(1280, 960)` |
+| `PDF_DPI` | Resolución de rasterizado del PDF (env `QUANTARA_PDF_DPI`). Menor = más barato. | `150` |
+| `MAX_IMAGE_SIDE` | Lado máximo tras redimensionar antes de la detección (env `QUANTARA_MAX_IMAGE_SIDE`). | `1600` |
+| `OCR_USE_ANGLE_CLS` | Clasificación de orientación de línea (env `QUANTARA_OCR_ANGLE_CLS`). OFF en PDFs digitales. | `0` (off) |
+| `OCR_ENABLE_MKLDNN` | Aceleración CPU oneDNN para PaddleOCR (env `QUANTARA_OCR_MKLDNN`). | `1` (on) |
+| `POPPLER_PATH` | Ruta a `bin` de Poppler. Vacío en Linux/macOS (usa el PATH del sistema). | *(sistema)* |
 
 ---
 

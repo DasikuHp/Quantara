@@ -1,14 +1,19 @@
-# Dependencias de Quantara
-# Responsabilidad: Gestión de dependencias del proyecto
+# Dependencias de Quantara (runtime mínimo)
+# El motor OCR es PaddleOCR (ligero, CPU). NO se usan torch/transformers/Donut
+# en el camino activo, por eso no figuran aquí: ahorran ~2-3 GB de instalación.
 
+# API & servidor
 fastapi
 uvicorn
-pydantic
-transformers
-torch
-pillow
-mlflow
 python-multipart
+pydantic
+
+# OCR
+paddleocr
+paddlepaddle
+pdf2image
+pillow
+numpy
+
+# Persistencia (SQLite, incluido en la stdlib de Python)
 sqlalchemy
-psycopg2-binary
-pydantic-settings
