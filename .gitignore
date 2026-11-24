@@ -1,2 +1,15 @@
 __pycache__/
 *.pyc
+.venv/
+venv/
+.env
+
+# Datos locales (albaranes reales y base de datos)
+*.db
+quantara/data/albaranes/*
+!quantara/data/albaranes/.gitkeep
+tests/fixtures/
+tests/ground_truth.json
+ocr_raw_output.txt
+mlruns/
+*.log
